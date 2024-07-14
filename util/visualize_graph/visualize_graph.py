@@ -1,0 +1,119 @@
+import itertools
+import pandas as pd
+from mlxtend.preprocessing import TransactionEncoder
+from mlxtend.frequent_patterns import apriori, association_rules,fpgrowth
+from util.find_top_k_subgraph.find_top_k_subgraph import find_top_k_subgraphs
+from util.find_subgraph_with_number_items.find_subgraph_with_number_items import find_subgraph_with_number_items
+
+import networkx as nx
+from collections import Counter
+from collections import defaultdict,deque
+import heapq
+import random
+
+def read_transactions(file_path):
+    df = pd.read_csv(file_path, usecols=['Product'])
+    transactions = df['Product'].apply(lambda products: frozenset(products.split(','))).tolist()
+    return transactions
+
+
+
+# Function to find frequent subgraphs using DFS
+
+
+
+def visualize_graph(file_path,K):
+     # Process transactions
+            transactions = pd.read_csv(file_path)['Product'].dropna().tolist()
+            transactions=[item.split(', ') for item in transactions]
+            te = TransactionEncoder()
+            te_ary = te.fit_transform(transactions)
+            df = pd.DataFrame(te_ary, columns=te.columns_)
+            # Step 2: Apply Apriori Algorithm to find frequent itemsets
+            frequent_itemsets = apriori(df, min_support=0.1, use_colnames=True)
+            # Step 3: Generate Association Rules
+            rules = association_rules(frequent_itemsets, metric="lift", min_threshold=1.0)
+            # Step 4: Filter for itemsets with at least 2 items and sort by support
+            frequent_patterns = frequent_itemsets[frequent_itemsets['itemsets'].apply(lambda x: len(x) == 4)]
+            frequent_patterns = frequent_patterns.sort_values(by='support', ascending=False)
+            # Step 5: Filter Top K Pattern
+            top_k_patterns = frequent_patterns.head(K)
+            # Step 6: Return data to visualize 
+            nodes = [{'id': item} for itemset in top_k_patterns['itemsets'] for item in itemset]
+            nodes = {node['id']: node for node in nodes}.values()
+            edges = []
+            colors = itertools.cycle(['red', 'green', 'blue', 'orange', 'purple', 'brown', 'pink', 'gray'])
+            for index, (itemset, color) in enumerate(zip(top_k_patterns['itemsets'], colors)):
+                items = list(itemset)
+                for i in range(len(items)):
+                    for j in range(i + 1, len(items)):
+                        edges.append({'source': items[i], 'target': items[j], 'color': color})
+            graph_data = {'nodes': list(nodes), 'links': edges}
+            return graph_data
+def visualize_graph_2(file_path,K):
+        transactions = read_transactions(file_path)
+        # Process transactions
+        min_support = 0.3
+        numofitem=2
+        print("Calculating_Subgraph")
+        frequent_subgraphs = find_top_k_subgraphs(transactions,K,min_support)
+        top_k_subgraphs = frequent_subgraphs[:K]
+        # Flatten the list of lists and remove duplicates
+        # unique_items = set(item.strip() for sublist in top_k_subgraphs for item in sublist)
+        # Step 6: Return data to visualize
+        nodes = [{'id': item} for subgraph, support in top_k_subgraphs for item in subgraph]
+        nodes = {node['id']: node for node in nodes}.values()
+
+        edges = []
+        color_space = [
+        'red', 'green', 'blue', 'orange', 'purple', 
+        'brown', 'pink', 'gray', 'cyan', 'magenta', 
+        'yellow', 'lime', 'teal', 'lavender', 'brown', 
+        'beige', 'maroon', 'mint', 'olive', 'coral', 
+        'navy', 'black', 'white', 'silver', 'gold'
+        ]
+        colors = itertools.cycle(color_space)
+
+        for index, (subgraph, color) in enumerate(zip(top_k_subgraphs, colors)):
+            items = subgraph[0]  # extract the subgraph
+            for i in range(len(items)):
+                for j in range(i + 1, len(items)):
+                    edges.append({'source': items[i], 'target': items[j], 'color': color})
+    
+        graph_data = {'nodes': list(nodes), 'links': edges}
+
+        return graph_data
+
+def visualize_graph_3(file_path,K):
+        transactions = read_transactions(file_path)
+        # Process transactions
+        min_support = 0.3
+        print("Calculating_Subgraph")
+        frequent_subgraphs = find_subgraph_with_number_items(transactions,K,min_support,False)
+        top_k_subgraphs = frequent_subgraphs[:K]
+        # Flatten the list of lists and remove duplicates
+        # unique_items = set(item.strip() for sublist in top_k_subgraphs for item in sublist)
+        # Step 6: Return data to visualize
+        nodes = [{'id': item} for subgraph, support in top_k_subgraphs for item in subgraph]
+        nodes = {node['id']: node for node in nodes}.values()
+
+        edges = []
+        color_space = [
+        'red', 'green', 'blue', 'orange', 'purple', 
+        'brown', 'pink', 'gray', 'cyan', 'magenta', 
+        'yellow', 'lime', 'teal', 'lavender', 'brown', 
+        'beige', 'maroon', 'mint', 'olive', 'coral', 
+        'navy', 'black', 'white', 'silver', 'gold'
+        ]
+        colors = itertools.cycle(color_space)
+
+        for index, (subgraph, color) in enumerate(zip(top_k_subgraphs, colors)):
+            items = subgraph[0]  # extract the subgraph
+            for i in range(len(items)):
+                for j in range(i + 1, len(items)):
+                    edges.append({'source': items[i], 'target': items[j], 'color': color})
+    
+        graph_data = {'nodes': list(nodes), 'links': edges}
+
+        return graph_data
+
