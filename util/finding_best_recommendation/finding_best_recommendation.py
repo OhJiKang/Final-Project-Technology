@@ -1,15 +1,12 @@
 from itertools import combinations
 from util.find_subgraph_with_number_items.find_subgraph_with_number_items import find_subgraph_with_number_items
+from util.execute_transaction.execute_transaction import transform_transaction
 import pandas as pd
 
 def calculate_support(subgraph, transactions):
     return sum(1 for transaction in transactions if subgraph.issubset(transaction))
 
 
-def read_transactions(file_path):
-    df = pd.read_csv(file_path, usecols=['Product'])
-    transactions = df['Product'].apply(lambda products: frozenset(products.split(','))).tolist()
-    return transactions
 
 
 
@@ -48,7 +45,7 @@ def finding_association_rules(transactions,num_of_item=2,min_support=0.3):
 def find_best_recommendation_item(item,file_path,num_of_item=2,min_support=0.3):
     best_rule = None
     best_score = -1
-    transactions=read_transactions(file_path)
+    transactions=transform_transaction(file_path)
     item_normalized = item.strip().lower()
     rules=finding_association_rules(transactions,num_of_item,min_support)
     for rule in rules:

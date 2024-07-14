@@ -7,6 +7,7 @@ import os
 import util.finding_best_recommendation
 from util.visualize_graph.visualize_graph import visualize_graph,visualize_graph_2,visualize_graph_3
 from util.finding_best_recommendation.finding_best_recommendation import find_best_recommendation_item
+from util.execute_transaction.execute_transaction import get_all_unique_item_from_transaction
 
 import util as util
 
@@ -57,6 +58,9 @@ def visualize_graph_2_view():
 def recommendation_page_view():
     return render_template('recommendation_page/index.html')
 
+@app.route('/get_unique_items')
+def get_unique_items_view():
+    return render_template('get_unique_items/index.html')
 
 @app.route('/visualize_graph_1', methods=['POST'])
 def visualize_graph_1_render():
@@ -119,6 +123,20 @@ def finding_best_recommendation_render():
         file.save(file_path)
         best_rule=find_best_recommendation_item(item,file_path,num_of_item,0.3)
         return jsonify(best_rule)
+    return jsonify({'error': 'Invalid file format'})
+@app.route('/get_unique_items_from_files', methods=['POST'])
+def get_unique_items_from_files():
+    if 'file' not in request.files:
+        return jsonify({'error': 'No file part'})
+    file = request.files['file']
+    if file.filename == '':
+        return jsonify({'error': 'No selected file'})
+    if file.filename.endswith('.csv'):
+        tempdir = os.path.join(os.path.dirname(__file__), 'temp')
+        file_path = os.path.join(tempdir, file.filename)
+        file.save(file_path)
+        unique_items=list(get_all_unique_item_from_transaction(file_path))
+        return jsonify(unique_items)
     return jsonify({'error': 'Invalid file format'})
 if __name__ == '__main__':
     app.run(debug=True)

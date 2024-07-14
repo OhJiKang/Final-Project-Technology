@@ -4,17 +4,13 @@ from mlxtend.preprocessing import TransactionEncoder
 from mlxtend.frequent_patterns import apriori, association_rules,fpgrowth
 from util.find_top_k_subgraph.find_top_k_subgraph import find_top_k_subgraphs
 from util.find_subgraph_with_number_items.find_subgraph_with_number_items import find_subgraph_with_number_items
+from util.execute_transaction.execute_transaction import transform_transaction
 
 import networkx as nx
 from collections import Counter
 from collections import defaultdict,deque
 import heapq
 import random
-
-def read_transactions(file_path):
-    df = pd.read_csv(file_path, usecols=['Product'])
-    transactions = df['Product'].apply(lambda products: frozenset(products.split(','))).tolist()
-    return transactions
 
 
 
@@ -51,7 +47,7 @@ def visualize_graph(file_path,K):
             graph_data = {'nodes': list(nodes), 'links': edges}
             return graph_data
 def visualize_graph_2(file_path,K):
-        transactions = read_transactions(file_path)
+        transactions = transform_transaction(file_path)
         # Process transactions
         min_support = 0.3
         numofitem=2
@@ -85,7 +81,7 @@ def visualize_graph_2(file_path,K):
         return graph_data
 
 def visualize_graph_3(file_path,K):
-        transactions = read_transactions(file_path)
+        transactions = transform_transaction(file_path)
         # Process transactions
         min_support = 0.3
         print("Calculating_Subgraph")
