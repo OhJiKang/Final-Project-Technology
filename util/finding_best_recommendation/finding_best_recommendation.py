@@ -38,7 +38,9 @@ def generate_association_rules(top_k_results, transactions, min_confidence=0.5):
     return rules
 
 def finding_association_rules(transactions,num_of_item=2,min_support=0.3):
+    print("Find Subgraph")
     subgraphs=find_subgraph_with_number_items(transactions,num_of_item,min_support)
+    print("Find Subgraph Done")
     rules=generate_association_rules(subgraphs,transactions,0.5)
     return rules
 

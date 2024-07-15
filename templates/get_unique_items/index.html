@@ -1,22 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Upload CSV File</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+{% extends 'base.html' %} {% block content %}
 
 <body>
-    <h1>Upload CSV File to Get Unique Items</h1>
-    <form action="/get_unique_items_from_files" method="post" enctype="multipart/form-data">
-        <label for="file">Select CSV file:</label>
-        <input type="file" id="file" name="file" accept=".csv" />
-        <button type="submit">Upload</button>
-    </form>
+  <h1>Upload CSV File to Get Unique Items</h1>
+  <form
+    action="/get_unique_items_from_files"
+    method="post"
+    enctype="multipart/form-data"
+  >
+    <label for="file">Select CSV file:</label>
+    <input type="file" id="file" name="file" accept=".csv" />
+    <button type="submit">Upload</button>
+  </form>
 
-    <script src="script.js"></script>
+  <script src="{{url_for('static', filename='JS/get_unique_items.js')}}"></script>
+  {% endblock %}
 </body>
-
-</html>

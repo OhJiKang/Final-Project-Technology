@@ -1,30 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %} {% block content %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='CSS/recommendation_page.css') }}"
+/>
+<h2>Find Best Recommendation</h2>
+<div id="analyze_file">
+  <label for="file">Upload CSV File:</label>
+  <input type="file" id="fileupload" name="file" accept=".csv" required />
+  <br />
+  <button type="submit" class="submit_analyze">Analyze Items</button>
+</div>
+<div id="recommendationForm" style="display: none">
+  <div style="display: flex">
+    <label for="numOfItem">Number of Items in the Combo:</label>
+    <input type="number" id="numOfItem" name="num_of_item" min="2" required />
+    <br />
+    <button class="submit_combo locked_submit_items_num">
+      Submit Num Of Item
+    </button>
+  </div>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Find Best Recommendation</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+  <label for="item">Item Available For Choosing:</label>
+  <div class="item_container_choosing" style="display: flex"></div>
+  <br />
+  <label for="item">Item Already Choosing:</label>
+  <div class="item_container_already_choosing" style="display: flex"></div>
+  <br />
 
-<body>
-    <h2>Find Best Recommendation</h2>
-    <form id="recommendationForm" enctype="multipart/form-data" method="POST" action="/finding_best_recommendation">
-        <label for="numOfItem">Number of Items:</label>
-        <input type="number" id="numOfItem" name="num_of_item" min="2" required />
-        <br />
-        <label for="item">Item:</label>
-        <input type="text" id="item" name="item" required />
-        <br />
-        <label for="file">Upload CSV File:</label>
-        <input type="file" id="file" name="file" accept=".csv" required />
-        <br />
-        <button type="submit">Find Recommendation</button>
-    </form>
-    <div id="result"></div>
+  <button type="submit" class="find_recommended_items_btn" disabled>
+    Find Recommendation
+  </button>
+</div>
+<div id="result"></div>
 
-    <script src="script.js"></script>
-</body>
+<script src="{{url_for('static', filename='JS/recommendation_page.js')}}"></script>
 
-</html>
+{% endblock %}
