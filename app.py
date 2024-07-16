@@ -114,7 +114,7 @@ def finding_best_recommendation_render():
         return jsonify({'error': 'No file part'})
     file = request.files['file']
     num_of_item = int(request.form['num_of_item'])
-    item=str(request.form["item"])
+    item=str(request.form["item"]).split(",")
     if file.filename == '':
         return jsonify({'error': 'No selected file'})
     if file.filename.endswith('.csv'):

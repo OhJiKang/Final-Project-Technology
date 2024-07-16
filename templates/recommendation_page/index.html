@@ -12,25 +12,15 @@
   <button type="submit" class="submit_analyze">Analyze Items</button>
 </div>
 <div id="recommendationForm" style="display: none">
-  <div style="display: flex">
-    <label for="numOfItem">Number of Items in the Combo:</label>
-    <input type="number" id="numOfItem" name="num_of_item" min="2" required />
-    <br />
-    <button class="submit_combo locked_submit_items_num">
-      Submit Num Of Item
-    </button>
-  </div>
-
   <label for="item">Item Available For Choosing:</label>
   <div class="item_container_choosing" style="display: flex"></div>
   <br />
-  <label for="item">Item Already Choosing:</label>
-  <div class="item_container_already_choosing" style="display: flex"></div>
-  <br />
-
-  <button type="submit" class="find_recommended_items_btn" disabled>
+  <button type="submit" class="find_recommended_items_btn">
     Find Recommendation
   </button>
+  <label for="item">Item Recommended:</label>
+  <div class="item_recommended" style="display: flex"></div>
+  <br />
 </div>
 <div id="result"></div>
 

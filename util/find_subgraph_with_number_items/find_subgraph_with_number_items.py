@@ -1,66 +1,72 @@
 from collections import defaultdict,deque
 import heapq
 
-# def find_subgraph_with_number_items(transactions,num_of_item=2,min_support=0.3,finding_only_rules=False):
-#     k=len(transactions)
-#     Qk = []  # Queue to store top-k subgraphs
-#     frequent_subgraphs = defaultdict(int)  # Dictionary to count subgraph occurrences
-#     Qc = []  # Priority queue for extending subgraphs
+def find_subgraph_with_number_items(transactions, num_of_item=2, min_support=0.1, finding_only_rules=False):
+    frequent_subgraphs = defaultdict(int)  # Dictionary to count subgraph occurrences
+    Qc = []  # Priority queue for extending subgraphs
+    normalized_transactions = [
+        {item.strip().lower() for item in transaction}
+        for transaction in transactions
+    ]
+    # Function to calculate support of a subgraph
+    def calculate_support(subgraph):
+        return sum(1 for transaction in normalized_transactions if subgraph.issubset(transaction))
     
-#     # Function to calculate support of a subgraph
-#     def calculate_support(subgraph):
-#         return sum(1 for transaction in transactions if subgraph.issubset(transaction))
+    # Normalize and strip items in transactions
     
-#     # Initialize Qc with single items and their supports
-#     items = set()
-#     for transaction in transactions:
-#         items.update(transaction)
-        
-#     for item in items:
-#         subgraph = frozenset([item])
-#         support = calculate_support(subgraph)
-#         if support >= min_support:
-#             heapq.heappush(Qc, (-support, subgraph))  # Store support as negative to use heapq as max-heap
 
-#     # Explore larger subgraphs based on the highest support in Qc
-#     while Qc and len(Qk) < k:
-#         current_support, current_subgraph = heapq.heappop(Qc)
-#         current_support = -current_support  # Restore original support value
-#         if current_support < min_support:
-#             continue
-        
-#         # Add to Qk if frequent
-#         frequent_subgraphs[current_subgraph] = current_support
-#         Qk.append((current_subgraph, current_support))
-        
-#         # Extend current_subgraph with each item and calculate support
-#         current_subgraph_set = set(current_subgraph)
-#         for item in items:
-#             if item not in current_subgraph_set:
-#                 new_subgraph = frozenset(current_subgraph | {item})
-#                 support = calculate_support(new_subgraph)
-#                 if support >= min_support:
-#                     heapq.heappush(Qc, (-support, new_subgraph))  # Store support as negative to use heapq as max-heap
+    # Initialize Qc with single items and their supports
+    items = set()
+    for transaction in normalized_transactions:
+        items.update(transaction)
+    for item in items:
+        subgraph = frozenset([item])
+        support = calculate_support(subgraph) / len(normalized_transactions)  # Calculate support as a fraction
+        if support >= min_support:
+            heapq.heappush(Qc, (-support, subgraph))  # Store support as negative to use heapq as max-heap
 
-#         # Update min_support based on the least frequent subgraph in Qk
-#         if len(Qk) == k:
-#             min_support = Qk[-1][1]
+    # Explore larger subgraphs based on the highest support in Qc
+    while Qc:
+        current_support, current_subgraph = heapq.heappop(Qc)
+        current_support = -current_support  # Restore original support value
+        if current_support < min_support:
+            continue
+        
+        # Add to frequent subgraphs if frequent
+        frequent_subgraphs[current_subgraph] = current_support
+        
+        # Extend current_subgraph with each item and calculate support
+        current_subgraph_set = set(current_subgraph)
+        for item in items:
+            if item not in current_subgraph_set:
+                new_subgraph = frozenset(current_subgraph | {item})
+                support = calculate_support(new_subgraph) / len(transactions)  # Calculate support as a fraction
+                if support >= min_support:
+                    heapq.heappush(Qc, (-support, new_subgraph))  # Store support as negative to use heapq as max-heap
 
-#     # Return top-k subgraphs with their support
-#     top_k_results = [(list(subgraph), support) for subgraph, support in Qk if len(subgraph)==num_of_item]
-#     return top_k_results
-def find_subgraph_with_number_items(transactions, num_of_item=2, min_support=0.3, finding_only_rules=False):
+    # Return all frequent subgraphs with their support
+    all_frequent_results = [
+        (list(subgraph), support) 
+        for subgraph, support in frequent_subgraphs.items() 
+        if len(subgraph) == num_of_item
+    ]
+    return all_frequent_results
+def find_all_subgraph(transactions, min_support=0.3, finding_only_rules=False):
     frequent_subgraphs = defaultdict(int)  # Dictionary to count subgraph occurrences
     Qc = []  # Priority queue for extending subgraphs
     hsups = {}  # Dictionary to store highest support for each extension
     
+    normalized_transactions = [
+        {item.strip().lower() for item in transaction}
+        for transaction in transactions
+    ]
     # Function to calculate support of a subgraph
     def calculate_support(subgraph):
-        return sum(1 for transaction in transactions if subgraph.issubset(transaction))
+        return sum(1 for transaction in normalized_transactions if subgraph.issubset(transaction))
     
     # Initial scan of the database to calculate support of single edge graphs
     items = set()
-    for transaction in transactions:
+    for transaction in normalized_transactions:
         items.update(transaction)
         
     for item in items:
@@ -95,9 +101,8 @@ def find_subgraph_with_number_items(transactions, num_of_item=2, min_support=0.3
                 if support >= min_support:
                     heapq.heappush(Qc, (-support, new_subgraph))  # Store support as negative to use heapq as max-heap
                     hsups[new_subgraph] = support  # Update the highest support
-
     # Return all subgraphs with their support
-    all_frequent_subgraphs = [(list(subgraph), support) for subgraph, support in frequent_subgraphs.items() if len(subgraph) == num_of_item]
+    all_frequent_subgraphs = [(list(subgraph), support) for subgraph, support in frequent_subgraphs.items()]
     return all_frequent_subgraphs
 
 
