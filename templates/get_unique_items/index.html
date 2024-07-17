@@ -1,4 +1,9 @@
 {% extends 'base.html' %} {% block content %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='CSS/get_unique_items.css') }}"
+/>
 <h1>Upload CSV File to Get Unique Items</h1>
 <form
   action="/get_unique_items_from_files"

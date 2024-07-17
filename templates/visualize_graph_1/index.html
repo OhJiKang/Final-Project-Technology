@@ -1,5 +1,9 @@
 {% extends 'base.html' %} {% block content %}
-
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='CSS/visualize_graph_1.css') }}"
+/>
 <h2>Top-K Frequent Product Patterns with Curved Edges</h2>
 <form id="uploadForm" enctype="multipart/form-data">
   <label for="kInput">K Value:</label>
