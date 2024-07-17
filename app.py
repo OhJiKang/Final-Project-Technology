@@ -44,7 +44,7 @@ def create_app(test_config=None):
 
 @app.route('/')
 def index_view():
-    return render_template('index.html')
+    return render_template('base.html')
 
 @app.route('/visualize_graph_1')
 def visualize_graph_1_view():

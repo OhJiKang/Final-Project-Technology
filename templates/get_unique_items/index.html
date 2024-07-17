@@ -1,17 +1,14 @@
 {% extends 'base.html' %} {% block content %}
+<h1>Upload CSV File to Get Unique Items</h1>
+<form
+  action="/get_unique_items_from_files"
+  method="post"
+  enctype="multipart/form-data"
+>
+  <label for="file">Select CSV file:</label>
+  <input type="file" id="file" name="file" accept=".csv" />
+  <button type="submit">Upload</button>
+</form>
 
-<body>
-  <h1>Upload CSV File to Get Unique Items</h1>
-  <form
-    action="/get_unique_items_from_files"
-    method="post"
-    enctype="multipart/form-data"
-  >
-    <label for="file">Select CSV file:</label>
-    <input type="file" id="file" name="file" accept=".csv" />
-    <button type="submit">Upload</button>
-  </form>
-
-  <script src="{{url_for('static', filename='JS/get_unique_items.js')}}"></script>
-  {% endblock %}
-</body>
+<script src="{{url_for('static', filename='JS/get_unique_items.js')}}"></script>
+{% endblock %}
