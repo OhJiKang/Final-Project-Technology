@@ -48,6 +48,7 @@ def find_best_recommendation_item(items,file_path,num_of_item=2,min_support=0.3)
     best_rule = None
     best_score = -1
     items_normalized = [item.strip().lower() for item in items]
+    print(items_normalized)
     transactions=transform_transaction(file_path)
     rules=finding_association_rules(transactions,num_of_item,min_support)
     for rule in rules:
@@ -58,10 +59,10 @@ def find_best_recommendation_item(items,file_path,num_of_item=2,min_support=0.3)
             if score > best_score:
                 best_score = score
                 best_rule = rule
-        # if best_rule==None:
-        #     if all(item.strip().lower() in antecedent_normalized for item in items):
-        #         score = rule['confidence']
-        #         if score > best_score:
-        #             best_score = score
-        #             best_rule = rule
+        if best_rule==None:
+            if all(item.strip().lower() in antecedent_normalized for item in items):
+                score = rule['confidence']
+                if score > best_score:
+                    best_score = score
+                    best_rule = rule
     return best_rule
