@@ -1,30 +1,32 @@
 {% extends 'base.html' %} {% block content %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/landing_page.css') }}" />
+
 <div id="wrapper" class="vh-100 d-flex justify-content-center align-items-center">
     <div class="nav-wrapper w-100 container">
         <div class="row">
             <div class="col col-12 col-md-6">
-                <div class="nav-item">
-                    <a href="get_unique_items" class="nav-link text-white">Get Unique Items</a>
-                </div>
+                <a href="get_unique_items" class="nav-item">
+                    <div class="nav-link text-white">Get Unique Items</div>
+                </a>
             </div>
             <div class="col col-12 col-md-6">
-                <div class="nav-item">
-                    <a href="visualize_graph_1" class="nav-link text-white">Visualize Graph 1</a>
-                </div>
+                <a href="visualize_graph_1" class="nav-item">
+                    <div class="nav-link text-white">Visualize Graph 1</div>
+                </a>
             </div>
             <div class="col col-12 col-md-6">
-                <div class="nav-item">
-                    <a href="visualize_graph_2" class="nav-link text-white">Visualize Graph 2</a>
-                </div>
+                <a href="visualize_graph_2" class="nav-item">
+                    <div class="nav-link text-white">Visualize Graph 2</div>
+                </a>
             </div>
             <div class="col col-12 col-md-6">
-                <div class="nav-item">
-                    <a href="finding_best_recommendation" class="nav-link text-white">Recommendation</a>
-                </div>
+                <a href="finding_best_recommendation" class="nav-item">
+                    <div class="nav-link text-white">Recommendation</div>
+                </a>
             </div>
         </div>
     </div>
 </div>
+
 <script src="{{url_for('static', filename='JS/landing_page.js')}}"></script>
 {% endblock %}

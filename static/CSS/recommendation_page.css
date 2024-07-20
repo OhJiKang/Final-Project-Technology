@@ -1,3 +1,52 @@
 .available_choosing:hover {
-  cursor: pointer;
+    cursor: pointer;
+}
+
+#wrapper {
+    padding: 24px 0;
+}
+
+#analyze_file {
+    max-width: 400px;
+    margin: 24px auto;
+    padding: 36px;
+    border-radius: 8px;
+    background-color: rgba(100, 100, 100, 0.4);
+    backdrop-filter: blur(8px);
+}
+
+.available_choosing {
+    margin: 24px 0;
+}
+
+.item_container_choosing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.available_choosing {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.available_cancel {
+    color: black;
+    background-color: rgb(255, 204, 0) !important;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.recommended_item_result {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 4px;
 }

@@ -1,28 +1,34 @@
 {% extends 'base.html' %} {% block content %}
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="{{ url_for('static', filename='CSS/recommendation_page.css') }}"
-/>
-<h2>Find Best Recommendation</h2>
-<div id="analyze_file">
-  <label for="file">Upload CSV File:</label>
-  <input type="file" id="fileupload" name="file" accept=".csv" required />
-  <br />
-  <button type="submit" class="submit_analyze">Analyze Items</button>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/recommendation_page.css') }}" />
+
+<div id="wrapper">
+    <div class="container">
+        <h2 class="text-center">Find Best Recommendation</h2>
+        <div id="analyze_file">
+            <div class="input-group mb-3">
+                <input type="file" id="fileupload" name="file" accept=".csv" required class="form-control">
+            </div>
+            <div class="d-flex justify-content-end">
+                <button class="submit_analyze btn btn-lg btn-info text-white" type="submit">Submit</button>
+            </div>
+        </div>
+        <div id="recommendationForm" style="display: none">
+            <div class="available_choosing">
+                <h5 for="item" class="text-center text-dark">Item Available For Choosing:</label>
+                <div class="item_container_choosing"></div>
+            </div>
+            <div class="d-flex justify-content-center mb-4">
+                <button type="submit" class="find_recommended_items_btn btn btn-lg btn-info text-white">
+                    Find Recommendation
+                </button>
+            </div>
+            <h5 for="item" class="text-center text-dark">Item Recommended:</h5>
+            <div class="item_recommended d-flex justify-content-center"></div>
+            <br />
+        </div>
+        <div id="result"></div>
+    </div>
 </div>
-<div id="recommendationForm" style="display: none">
-  <label for="item">Item Available For Choosing:</label>
-  <div class="item_container_choosing" style="display: flex"></div>
-  <br />
-  <button type="submit" class="find_recommended_items_btn">
-    Find Recommendation
-  </button>
-  <label for="item">Item Recommended:</label>
-  <div class="item_recommended" style="display: flex"></div>
-  <br />
-</div>
-<div id="result"></div>
 
 <script src="{{url_for('static', filename='JS/recommendation_page.js')}}"></script>
 

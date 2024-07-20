@@ -1,14 +1,35 @@
 .node {
-  stroke: #fff;
-  stroke-width: 1.5px;
+    stroke: #fff;
+    stroke-width: 1.5px;
 }
 
 .link {
-  fill: none;
-  stroke-width: 1.5px;
+    fill: none;
+    stroke-width: 1.5px;
 }
 
 .overlay {
-  fill: none;
-  pointer-events: all;
+    fill: none;
+    pointer-events: all;
+}
+
+#wrapper {
+    padding: 24px 0;
+}
+
+#graph-container {
+    background-color: rgba(200, 200, 200, 0.4);
+    overflow: hidden;
+    width: 100%;
+    height: 800px;
+    border-radius: 8px;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 24px auto;
+    padding: 36px;
+    border-radius: 8px;
+    background-color: rgba(100, 100, 100, 0.4);
+    backdrop-filter: blur(8px);
 }
