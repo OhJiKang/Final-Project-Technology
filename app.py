@@ -48,19 +48,19 @@ def index_view():
 
 @app.route('/visualize_graph_1')
 def visualize_graph_1_view():
-    return render_template('visualize_graph_1/index.html')
+    return render_template('visualize_graph_1/index.html', active_page='visualize_graph_1')
 
 @app.route('/visualize_graph_2')
 def visualize_graph_2_view():
-    return render_template('visualize_graph_2/index.html')
+    return render_template('visualize_graph_2/index.html', active_page='visualize_graph_2')
 
 @app.route('/finding_best_recommendation')
 def recommendation_page_view():
-    return render_template('recommendation_page/index.html')
+    return render_template('recommendation_page/index.html', active_page='recommendation_page')
 
 @app.route('/get_unique_items')
 def get_unique_items_view():
-    return render_template('get_unique_items/index.html')
+    return render_template('get_unique_items/index.html', active_page='get_unique_items')
 
 @app.route('/visualize_graph_1', methods=['POST'])
 def visualize_graph_1_render():

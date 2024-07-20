@@ -1,0 +1,20 @@
+#wrapper {
+    padding: 24px 0;
+}
+
+.input_card {
+    max-width: 400px;
+    margin: 24px auto;
+    padding: 36px;
+    border-radius: 8px;
+    background-color: rgba(100, 100, 100, 0.4);
+    backdrop-filter: blur(8px);
+}
+
+.available_choosing {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px;
+    border-radius: 4px;
+}
