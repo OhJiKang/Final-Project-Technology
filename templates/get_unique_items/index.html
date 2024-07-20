@@ -1,4 +1,5 @@
 {% extends 'base.html' %} {% block content %}
+<<<<<<< HEAD
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/get_unique_items.css') }}" />
 
 <div id="wrapper">
@@ -9,6 +10,25 @@
         <button type="submit">Upload</button>
     </form>
 </div>
+=======
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='CSS/get_unique_items.css') }}"
+/>
+<h1>Upload CSV File to Get Unique Items</h1>
+<form
+  action="/get_unique_items_from_files"
+  enctype="multipart/form-data"
+  id="uploadForm"
+>
+  <label for="file">Select CSV file:</label>
+  <input type="file" id="fileInput" name="file" accept=".csv" />
+  <button type="submit">Upload</button>
+  <label for="item">Item Unique:</label>
+  <div class="item_container_choosing" style="display: flex"></div>
+</form>
+>>>>>>> cea94b45192aa0b700f4b5f03ba09dde8ada9eb4
 
 <script src="{{url_for('static', filename='JS/get_unique_items.js')}}"></script>
 {% endblock %}
