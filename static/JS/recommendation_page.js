@@ -53,7 +53,10 @@ $(document).ready(() => {
       processData: false,
       contentType: false,
       success: function (data) {
+        $(".item_container_choosing").off("click");
         $(".item_container").html("");
+        nameofItemsClicked.splice(0, nameofItemsClicked.length);
+
         let htmls = "";
         if (data) {
           data.forEach((element, index) => {

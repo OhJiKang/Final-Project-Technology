@@ -85,12 +85,11 @@ def visualize_graph_3(file_path,K):
         # Process transactions
         min_support = 0.3
         print("Calculating_Subgraph")
-        frequent_subgraphs = find_subgraph_with_number_items(transactions,K,min_support,False)
-        top_k_subgraphs = frequent_subgraphs[:K]
+        frequent_subgraphs = find_subgraph_with_number_items(transactions,K,min_support)
         # Flatten the list of lists and remove duplicates
         # unique_items = set(item.strip() for sublist in top_k_subgraphs for item in sublist)
         # Step 6: Return data to visualize
-        nodes = [{'id': item} for subgraph, support in top_k_subgraphs for item in subgraph]
+        nodes = [{'id': item} for subgraph, support in frequent_subgraphs for item in subgraph]
         nodes = {node['id']: node for node in nodes}.values()
 
         edges = []
@@ -103,7 +102,7 @@ def visualize_graph_3(file_path,K):
         ]
         colors = itertools.cycle(color_space)
 
-        for index, (subgraph, color) in enumerate(zip(top_k_subgraphs, colors)):
+        for index, (subgraph, color) in enumerate(zip(frequent_subgraphs, colors)):
             items = subgraph[0]  # extract the subgraph
             for i in range(len(items)):
                 for j in range(i + 1, len(items)):

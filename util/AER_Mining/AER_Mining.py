@@ -32,7 +32,6 @@ def AER_Transaction_Rules(transactions,minsup=0.03,minlift=0.04,minconf=0.02):
     # Step 2: Pattern Growth
     list_patterns = []
     k = 1
-
     while map_candidates:
         new_map_candidates = []
         for candidate in map_candidates:

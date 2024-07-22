@@ -1,29 +1,49 @@
 {% extends 'base.html' %} {% block content %} {% include 'navigation.html' %}
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/visualize_graph_1.css') }}" />
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='CSS/visualize_graph_1.css') }}"
+/>
 
 <div id="wrapper">
-    <div class="container">
-        <h2 class="text-center">Top-K Frequent Product Patterns with Curved Edges</h2>
-        <div class="form-container">
-            <form id="uploadForm" enctype="multipart/form-data">
-                <div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">K Value</span>
-                        <input type="number" id="kInput" name="k" min="1" required class="form-control">
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="file" id="fileInput" name="file" accept=".csv" required class="form-control">
-                    </div>
-                    <div class="d-flex justify-content-end">
-                        <button class="btn btn-lg btn-info text-white" type="submit">Submit</button>
-                    </div>
-                </div>
-            </form>
+  <div class="container">
+    <h2 class="text-center">Top-K Frequent Subgraph with Curved Edges</h2>
+    <div class="form-container">
+      <form id="uploadForm" enctype="multipart/form-data">
+        <div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">K Value</span>
+            <input
+              type="number"
+              id="kInput"
+              name="k"
+              min="1"
+              required
+              class="form-control"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <input
+              type="file"
+              id="fileInput"
+              name="file"
+              accept=".csv"
+              required
+              class="form-control"
+            />
+          </div>
+          <div class="d-flex justify-content-end">
+            <button class="btn btn-lg btn-info text-white" type="submit">
+              Submit
+            </button>
+          </div>
         </div>
-        <div id="graph-container">
-            <svg id="graph" width="100%" height="100%"></svg>
-        </div>
+      </form>
     </div>
+    <div id="graph-container">
+      <svg id="graph" width="100%" height="100%"></svg>
+    </div>
+  </div>
 </div>
 
 <script src="https://d3js.org/d3.v6.min.js"></script>

@@ -1,0 +1,200 @@
+﻿Transaction_ID,Date,Customer_Name,Product,Total_Items,Total_Cost,Payment_Method,City,Store_Type,Discount_Applied,Customer_Category,Season,Promotion
+1000000000,1/21/2022 6:27,Stacey Price,"Dish Soap, Spinach, Light Bulb",3,71.65,Mobile Payment,Los Angeles,Warehouse Club,TRUE,Homemaker,Winter,None
+1000000001,3/1/2023 13:01,Michelle Carlson,"Dish Soap, Spinach, Bread, Olive Oil, Milk, Light Bulb, Shaving Cream, Mustard, Ice Cream, Tissues",2,25.93,Cash,San Francisco,Specialty Store,TRUE,Professional,Fall,BOGO (Buy One Get One)
+1000000002,3/21/2024 15:37,Lisa Graves,"Ketchup, Dish Soap, Olive Oil, Tissues, Mustard",6,41.49,Credit Card,Houston,Department Store,TRUE,Professional,Winter,None
+1000000003,10/31/2020 9:59,Mrs. Patricia May,"Light Bulb, Ice Cream, Tissues, Mustard, Dish Soap, Milk, Shaving Cream",1,39.34,Mobile Payment,Chicago,Pharmacy,TRUE,Homemaker,Spring,None
+1000000004,12/10/2020 0:59,Susan Mitchell,"Tissues, Ketchup, Light Bulb",10,16.42,Debit Card,Houston,Specialty Store,FALSE,Young Adult,Winter,Discount on Selected Items
+1000000005,10/7/2021 12:37,Joshua Frazier,"Olive Oil, Tissues, Ketchup, Milk, Ice Cream, Spinach, Shaving Cream, Light Bulb",3,72.24,Cash,Houston,Supermarket,TRUE,Retiree,Spring,Discount on Selected Items
+1000000006,1/8/2023 10:40,Victoria Garrett,"Spinach, Mustard, Light Bulb, Ketchup, Ice Cream, Olive Oil, Shaving Cream",4,5.28,Cash,Boston,Specialty Store,FALSE,Student,Summer,Discount on Selected Items
+1000000007,9/3/2020 12:39,Sydney Waller,"Milk, Tissues, Ice Cream, Olive Oil, Dish Soap, Mustard",5,21.77,Debit Card,Chicago,Specialty Store,FALSE,Young Adult,Winter,Discount on Selected Items
+1000000008,4/5/2021 6:32,Kimberly Morgan,"Tissues, Milk, Olive Oil, Mustard, Light Bulb, Ice Cream, Bread, Dish Soap, Shaving Cream",4,55.25,Mobile Payment,Los Angeles,Warehouse Club,FALSE,Homemaker,Fall,None
+1000000009,7/8/2021 10:08,Lori Conway,"Shaving Cream, Spinach, Milk, Tissues, Dish Soap, Mustard",7,31.21,Mobile Payment,Boston,Convenience Store,TRUE,Young Adult,Winter,None
+1000000010,3/18/2020 18:58,Randall Roberts,"Spinach, Mustard, Bread, Light Bulb, Shaving Cream, Milk, Tissues, Dish Soap, Ice Cream, Olive Oil, Ketchup",8,91.59,Debit Card,Boston,Department Store,TRUE,Middle-Aged,Fall,BOGO (Buy One Get One)
+1000000011,3/30/2023 19:26,Jeremiah White,"Mustard, Olive Oil, Milk, Tissues",7,31.88,Mobile Payment,New York,Specialty Store,FALSE,Young Adult,Fall,Discount on Selected Items
+1000000012,5/27/2023 15:52,Sheila Mcgee,"Light Bulb, Mustard, Shaving Cream, Ketchup, Ice Cream, Olive Oil, Bread, Dish Soap, Spinach, Tissues",9,39.75,Debit Card,New York,Pharmacy,FALSE,Student,Summer,Discount on Selected Items
+1000000013,4/2/2023 9:24,Allen Miles,"Spinach, Dish Soap, Olive Oil, Mustard, Light Bulb, Ketchup, Milk",7,17.51,Mobile Payment,Seattle,Warehouse Club,FALSE,Retiree,Winter,BOGO (Buy One Get One)
+1000000014,4/9/2020 4:31,Mark Howard,"Mustard, Milk, Shaving Cream, Ice Cream, Ketchup, Spinach, Tissues",1,33.64,Credit Card,San Francisco,Warehouse Club,TRUE,Retiree,Spring,None
+1000000015,1/1/2021 4:29,Jesse Henderson,"Tissues, Light Bulb, Spinach, Olive Oil",7,29.57,Mobile Payment,San Francisco,Convenience Store,FALSE,Retiree,Winter,BOGO (Buy One Get One)
+1000000016,10/15/2021 13:24,Eric Wall,"Olive Oil, Shaving Cream, Mustard, Ice Cream",5,99.7,Mobile Payment,Miami,Specialty Store,TRUE,Homemaker,Spring,None
+1000000017,9/16/2021 9:28,Vanessa Peck,"Tissues, Mustard, Bread",8,15.62,Credit Card,San Francisco,Department Store,FALSE,Senior Citizen,Fall,None
+1000000018,7/18/2022 11:33,Dominique Stout,"Bread, Light Bulb, Shaving Cream, Ice Cream, Mustard, Milk",3,98.28,Mobile Payment,New York,Warehouse Club,FALSE,Professional,Fall,BOGO (Buy One Get One)
+1000000019,1/31/2021 7:52,Charles Brooks,"Bread, Dish Soap, Tissues, Spinach",7,96.77,Debit Card,Chicago,Department Store,TRUE,Homemaker,Winter,Discount on Selected Items
+1000000020,10/31/2021 7:46,Angela Jones,"Ice Cream, Spinach, Shaving Cream, Tissues",7,83.86,Cash,Houston,Pharmacy,FALSE,Teenager,Winter,Discount on Selected Items
+1000000021,12/30/2022 20:03,John Roberts,"Tissues, Milk, Dish Soap",1,39.93,Credit Card,Miami,Department Store,FALSE,Retiree,Summer,BOGO (Buy One Get One)
+1000000022,6/8/2021 10:28,Nicole White,"Light Bulb, Tissues, Ice Cream, Olive Oil, Mustard, Bread, Spinach, Dish Soap, Shaving Cream",4,35.62,Mobile Payment,New York,Warehouse Club,TRUE,Retiree,Spring,BOGO (Buy One Get One)
+1000000023,1/3/2020 23:24,Don Harris,"Ketchup, Light Bulb, Olive Oil, Spinach, Dish Soap, Shaving Cream, Tissues, Ice Cream, Mustard, Milk",7,19.56,Cash,San Francisco,Department Store,FALSE,Retiree,Spring,BOGO (Buy One Get One)
+1000000024,2/27/2023 16:46,Hannah Rowland,"Milk, Tissues, Light Bulb, Ice Cream, Dish Soap, Spinach",4,24.03,Debit Card,Dallas,Pharmacy,FALSE,Student,Winter,None
+1000000025,2/14/2020 13:19,Jessica Gonzalez,"Shaving Cream, Mustard, Ketchup, Ice Cream, Bread, Milk, Olive Oil, Dish Soap",10,7.82,Credit Card,New York,Convenience Store,FALSE,Professional,Fall,BOGO (Buy One Get One)
+1000000026,9/21/2020 10:34,Christina Smith,"Milk, Light Bulb, Ketchup, Spinach",6,49.45,Debit Card,Dallas,Warehouse Club,FALSE,Senior Citizen,Winter,Discount on Selected Items
+1000000027,3/26/2020 22:08,Latoya Allen,"Spinach, Tissues, Ketchup, Dish Soap",10,29.36,Mobile Payment,Boston,Specialty Store,FALSE,Professional,Spring,None
+1000000028,8/13/2022 1:26,Clayton Roth,"Shaving Cream, Ketchup, Milk, Light Bulb, Spinach, Olive Oil",7,21.08,Credit Card,San Francisco,Specialty Store,TRUE,Teenager,Fall,None
+1000000029,2/27/2020 10:23,Dennis Alvarez,"Spinach, Mustard, Light Bulb, Dish Soap, Milk, Ice Cream",7,75.38,Mobile Payment,Houston,Convenience Store,TRUE,Teenager,Summer,Discount on Selected Items
+1000000030,1/8/2023 22:59,Jose Hill,"Milk, Tissues, Light Bulb, Shaving Cream",1,73.17,Debit Card,Boston,Specialty Store,TRUE,Senior Citizen,Spring,None
+1000000031,5/4/2024 13:22,Kristin Webb,"Milk, Shaving Cream, Mustard, Ice Cream, Bread, Dish Soap, Light Bulb, Ketchup",4,13.34,Debit Card,Houston,Department Store,FALSE,Teenager,Summer,None
+1000000032,4/4/2023 10:57,Robert Gilbert DDS,"Mustard, Dish Soap, Spinach, Bread, Tissues, Ice Cream, Ketchup, Shaving Cream, Light Bulb, Milk, Olive Oil",7,41.4,Debit Card,Chicago,Supermarket,FALSE,Middle-Aged,Spring,None
+1000000033,3/26/2022 19:18,Thomas Oliver,"Ketchup, Spinach, Shaving Cream, Bread, Tissues",8,26.67,Credit Card,Chicago,Specialty Store,TRUE,Homemaker,Spring,Discount on Selected Items
+1000000034,2/7/2023 14:09,Stacy Owen,"Tissues, Milk, Ketchup, Olive Oil, Ice Cream, Mustard, Shaving Cream, Light Bulb, Spinach",5,34.27,Credit Card,San Francisco,Supermarket,TRUE,Teenager,Summer,BOGO (Buy One Get One)
+1000000035,10/12/2022 11:57,Ann Kane,"Shaving Cream, Dish Soap, Bread, Ketchup, Olive Oil, Tissues, Light Bulb",10,62.33,Credit Card,Miami,Warehouse Club,FALSE,Young Adult,Spring,None
+1000000036,10/16/2020 9:05,Mr. John Long,"Bread, Ketchup, Light Bulb, Tissues",4,19.11,Debit Card,Chicago,Convenience Store,TRUE,Middle-Aged,Winter,Discount on Selected Items
+1000000037,5/31/2020 5:35,Annette Robinson,"Mustard, Tissues, Ketchup, Dish Soap, Shaving Cream, Ice Cream, Spinach",4,25.76,Mobile Payment,Los Angeles,Warehouse Club,TRUE,Homemaker,Fall,BOGO (Buy One Get One)
+1000000038,7/11/2020 22:15,Kimberly Baldwin,"Tissues, Milk, Bread, Olive Oil, Ketchup, Mustard, Spinach, Shaving Cream",7,61.55,Credit Card,New York,Convenience Store,FALSE,Student,Fall,None
+1000000039,7/11/2023 11:36,Donald Bradford,"Spinach, Milk, Tissues, Bread, Mustard, Dish Soap, Ketchup, Ice Cream",5,39.08,Cash,Dallas,Supermarket,FALSE,Young Adult,Spring,None
+1000000040,5/31/2022 17:09,Mike Gilbert,"Milk, Olive Oil, Light Bulb, Dish Soap, Mustard, Bread, Spinach, Tissues",4,12.97,Credit Card,Atlanta,Department Store,FALSE,Professional,Winter,None
+1000000041,7/1/2023 20:11,Rebecca Morton,"Dish Soap, Olive Oil, Ice Cream, Ketchup, Spinach, Bread, Light Bulb, Mustard, Tissues, Milk",8,56.99,Debit Card,Miami,Specialty Store,TRUE,Retiree,Summer,Discount on Selected Items
+1000000042,11/13/2023 12:48,Nicole Hernandez,"Mustard, Bread, Dish Soap, Shaving Cream, Tissues, Ice Cream, Spinach, Olive Oil, Ketchup, Milk, Light Bulb",9,99.77,Cash,Boston,Specialty Store,TRUE,Professional,Spring,Discount on Selected Items
+1000000043,10/12/2020 12:39,Paige White,"Olive Oil, Ice Cream, Shaving Cream, Spinach, Bread, Tissues, Ketchup, Dish Soap, Mustard, Light Bulb",8,29.82,Cash,Atlanta,Specialty Store,FALSE,Student,Winter,Discount on Selected Items
+1000000044,9/21/2022 5:09,Mr. Lance Perkins,"Spinach, Shaving Cream, Dish Soap, Bread, Light Bulb, Milk, Ice Cream",7,89.97,Cash,Atlanta,Department Store,FALSE,Middle-Aged,Winter,None
+1000000045,10/28/2022 18:17,Kelly Foley,"Olive Oil, Spinach, Shaving Cream, Ketchup, Ice Cream, Tissues",2,83.55,Credit Card,Chicago,Convenience Store,FALSE,Professional,Spring,Discount on Selected Items
+1000000046,5/10/2024 23:21,Paula Maldonado,"Spinach, Ice Cream, Dish Soap",10,44.98,Cash,Dallas,Convenience Store,FALSE,Student,Fall,None
+1000000047,2/6/2023 1:31,Roberto Franklin,"Dish Soap, Mustard, Milk",7,76.09,Mobile Payment,Los Angeles,Convenience Store,TRUE,Retiree,Summer,None
+1000000048,4/17/2024 0:49,Steven Clements,"Ketchup, Olive Oil, Mustard, Light Bulb, Milk, Tissues, Shaving Cream, Spinach, Bread, Dish Soap, Ice Cream",10,55.69,Credit Card,Seattle,Department Store,TRUE,Teenager,Summer,Discount on Selected Items
+1000000049,6/24/2021 14:01,Katherine Luna,"Ice Cream, Tissues, Olive Oil, Light Bulb, Milk, Mustard, Bread, Ketchup, Dish Soap, Shaving Cream",3,61.53,Cash,Houston,Warehouse Club,FALSE,Retiree,Winter,Discount on Selected Items
+1000000050,4/10/2021 19:14,Ryan Hammond,"Milk, Bread, Mustard, Tissues, Light Bulb, Shaving Cream, Dish Soap, Olive Oil, Spinach",1,78.46,Mobile Payment,San Francisco,Supermarket,FALSE,Teenager,Summer,Discount on Selected Items
+1000000051,9/18/2023 9:06,Valerie Johnson,"Mustard, Spinach, Ketchup, Milk, Ice Cream, Shaving Cream, Bread, Light Bulb",9,49.7,Mobile Payment,Miami,Pharmacy,TRUE,Retiree,Fall,None
+1000000052,5/10/2020 17:02,Jennifer Mitchell,"Milk, Shaving Cream, Tissues",10,87.04,Mobile Payment,Boston,Convenience Store,FALSE,Senior Citizen,Summer,BOGO (Buy One Get One)
+1000000053,12/30/2020 14:17,Nathan Schwartz,"Dish Soap, Spinach, Ketchup, Ice Cream, Olive Oil, Tissues, Bread, Milk, Shaving Cream, Mustard, Light Bulb",2,9.55,Cash,Houston,Warehouse Club,FALSE,Senior Citizen,Fall,BOGO (Buy One Get One)
+1000000054,3/2/2023 19:56,Rebecca Gilmore,"Milk, Dish Soap, Ice Cream, Bread, Olive Oil",8,46.79,Debit Card,Los Angeles,Specialty Store,FALSE,Retiree,Winter,None
+1000000055,6/23/2022 18:30,Todd Parrish,"Spinach, Olive Oil, Shaving Cream",7,25.89,Mobile Payment,Seattle,Specialty Store,TRUE,Student,Fall,Discount on Selected Items
+1000000056,5/9/2022 8:42,Christopher Blake,"Ketchup, Mustard, Milk",6,5.21,Cash,Dallas,Warehouse Club,FALSE,Young Adult,Winter,BOGO (Buy One Get One)
+1000000057,11/23/2021 7:49,Marie Young,"Tissues, Mustard, Spinach, Light Bulb, Olive Oil",3,12.72,Cash,Los Angeles,Pharmacy,TRUE,Homemaker,Summer,BOGO (Buy One Get One)
+1000000058,1/11/2024 5:41,James Mccarthy,"Milk, Light Bulb, Bread, Spinach, Ketchup, Shaving Cream",5,15.14,Mobile Payment,Miami,Pharmacy,FALSE,Middle-Aged,Winter,Discount on Selected Items
+1000000059,6/30/2020 0:58,Sharon Espinoza,"Tissues, Dish Soap, Ketchup, Light Bulb, Milk, Olive Oil, Mustard",4,15.68,Debit Card,Atlanta,Specialty Store,TRUE,Professional,Winter,None
+1000000060,11/11/2021 3:45,Rachel Rasmussen,"Bread, Milk, Mustard, Spinach, Shaving Cream, Light Bulb, Dish Soap, Olive Oil, Tissues, Ice Cream, Ketchup",2,92.78,Credit Card,Seattle,Supermarket,TRUE,Young Adult,Fall,None
+1000000061,10/28/2021 20:51,Thomas Lowery,"Shaving Cream, Ice Cream, Mustard, Ketchup, Bread, Olive Oil, Tissues",10,35.95,Credit Card,Boston,Department Store,TRUE,Senior Citizen,Winter,BOGO (Buy One Get One)
+1000000062,6/23/2021 6:46,Richard Johnston,"Milk, Dish Soap, Bread, Tissues, Ice Cream, Mustard, Olive Oil, Spinach",5,88.59,Cash,Chicago,Specialty Store,FALSE,Professional,Winter,BOGO (Buy One Get One)
+1000000063,8/24/2023 5:20,Rebecca Vasquez,"Tissues, Spinach, Dish Soap",6,66.87,Mobile Payment,Houston,Department Store,TRUE,Professional,Summer,BOGO (Buy One Get One)
+1000000064,6/28/2021 6:41,Samuel Mays,"Ice Cream, Milk, Olive Oil, Dish Soap, Spinach, Mustard, Shaving Cream, Tissues, Light Bulb, Bread, Ketchup",3,37.35,Cash,San Francisco,Department Store,TRUE,Young Adult,Winter,Discount on Selected Items
+1000000065,8/14/2023 13:19,Karen Williams,"Tissues, Mustard, Shaving Cream, Spinach, Ice Cream, Ketchup, Light Bulb, Dish Soap, Milk, Bread",6,60.37,Debit Card,New York,Department Store,FALSE,Young Adult,Spring,BOGO (Buy One Get One)
+1000000066,4/8/2022 8:49,Ian Murphy,"Ice Cream, Shaving Cream, Light Bulb, Mustard, Bread, Spinach, Olive Oil, Tissues",8,51.42,Credit Card,Miami,Department Store,TRUE,Homemaker,Winter,None
+1000000067,4/4/2020 1:57,Elizabeth Li,"Bread, Light Bulb, Ketchup, Dish Soap, Ice Cream, Olive Oil, Mustard",1,54.04,Mobile Payment,Miami,Specialty Store,TRUE,Retiree,Spring,None
+1000000068,10/30/2021 21:16,Brenda Chase,"Bread, Tissues, Ice Cream, Light Bulb",3,67.43,Cash,Dallas,Department Store,TRUE,Teenager,Fall,None
+1000000069,8/19/2022 7:26,Anthony Miranda,"Olive Oil, Milk, Shaving Cream",8,48.83,Cash,Seattle,Warehouse Club,FALSE,Retiree,Summer,BOGO (Buy One Get One)
+1000000070,9/21/2020 9:18,Patricia Adams,"Milk, Tissues, Light Bulb",8,19.4,Credit Card,Atlanta,Pharmacy,FALSE,Senior Citizen,Fall,Discount on Selected Items
+1000000071,5/11/2020 12:03,Jacob Douglas,"Mustard, Tissues, Spinach, Dish Soap, Shaving Cream, Light Bulb, Milk, Ice Cream",1,12.73,Mobile Payment,Houston,Pharmacy,FALSE,Retiree,Spring,Discount on Selected Items
+1000000072,10/27/2022 3:15,Martin Gonzalez,"Mustard, Milk, Light Bulb, Olive Oil, Tissues, Shaving Cream, Ice Cream",5,77.41,Mobile Payment,Los Angeles,Specialty Store,FALSE,Student,Spring,None
+1000000073,6/13/2021 14:25,Sherry Nunez,"Bread, Mustard, Shaving Cream, Tissues, Dish Soap",4,78.52,Credit Card,Miami,Supermarket,TRUE,Homemaker,Summer,None
+1000000074,3/16/2020 13:50,Joshua Livingston,"Milk, Spinach, Ice Cream, Shaving Cream, Light Bulb, Bread, Dish Soap, Mustard, Olive Oil, Ketchup, Tissues",2,16.9,Mobile Payment,Dallas,Supermarket,TRUE,Middle-Aged,Spring,Discount on Selected Items
+1000000075,5/28/2023 19:43,Kimberly Morton,"Milk, Spinach, Shaving Cream, Ketchup, Light Bulb, Tissues, Olive Oil, Ice Cream",1,40.11,Debit Card,Seattle,Convenience Store,FALSE,Teenager,Summer,Discount on Selected Items
+1000000076,4/11/2024 22:31,Robin Graham,"Light Bulb, Milk, Mustard, Bread, Olive Oil, Tissues",6,57.04,Cash,Atlanta,Warehouse Club,FALSE,Homemaker,Winter,BOGO (Buy One Get One)
+1000000077,3/18/2024 2:50,Donna Randall,"Spinach, Bread, Mustard, Light Bulb",6,68.29,Mobile Payment,Los Angeles,Specialty Store,FALSE,Young Adult,Fall,BOGO (Buy One Get One)
+1000000078,1/6/2021 11:48,Alfred Schneider,"Shaving Cream, Mustard, Bread",4,41.24,Debit Card,Dallas,Supermarket,FALSE,Homemaker,Fall,None
+1000000079,1/24/2024 16:50,Taylor Wilson,"Tissues, Milk, Ice Cream, Spinach, Shaving Cream, Dish Soap, Olive Oil, Ketchup, Bread",4,72.11,Cash,Los Angeles,Department Store,TRUE,Professional,Winter,BOGO (Buy One Get One)
+1000000080,5/16/2020 23:24,Matthew Henderson,"Dish Soap, Bread, Ketchup, Mustard, Olive Oil, Milk, Spinach, Ice Cream, Light Bulb, Tissues",1,65.96,Mobile Payment,Miami,Convenience Store,TRUE,Teenager,Summer,Discount on Selected Items
+1000000081,5/10/2022 23:55,Christina Hoover,"Spinach, Light Bulb, Ice Cream, Mustard, Bread, Shaving Cream, Milk",4,80.75,Credit Card,New York,Warehouse Club,TRUE,Homemaker,Winter,Discount on Selected Items
+1000000082,9/12/2021 13:17,Paul Tate,"Milk, Shaving Cream, Tissues, Light Bulb, Ice Cream",9,68.09,Debit Card,New York,Specialty Store,TRUE,Retiree,Winter,BOGO (Buy One Get One)
+1000000083,9/10/2020 19:56,Melissa Rose,"Spinach, Dish Soap, Bread, Mustard, Olive Oil, Shaving Cream, Ketchup, Ice Cream, Light Bulb, Tissues, Milk",8,16.17,Debit Card,Seattle,Pharmacy,FALSE,Teenager,Spring,Discount on Selected Items
+1000000084,5/30/2022 10:26,Brittany Simmons,"Dish Soap, Ketchup, Tissues, Milk, Spinach, Mustard",5,89.56,Mobile Payment,Chicago,Supermarket,FALSE,Student,Winter,Discount on Selected Items
+1000000085,10/28/2020 23:16,Henry Kirk,"Spinach, Milk, Ketchup, Olive Oil, Bread, Tissues, Shaving Cream, Ice Cream, Mustard",5,54.94,Credit Card,Dallas,Supermarket,FALSE,Student,Winter,None
+1000000086,9/22/2020 3:20,James Richardson,"Ketchup, Tissues, Shaving Cream, Olive Oil",1,93.74,Cash,Seattle,Specialty Store,FALSE,Retiree,Fall,None
+1000000087,9/3/2021 1:57,Keith Rodriguez,"Shaving Cream, Mustard, Ice Cream, Ketchup, Tissues, Spinach, Bread, Light Bulb, Dish Soap",10,67.87,Cash,Chicago,Specialty Store,TRUE,Retiree,Spring,None
+1000000088,4/23/2020 4:16,Marie Owen,"Shaving Cream, Milk, Dish Soap, Bread, Ketchup, Tissues, Spinach, Light Bulb, Olive Oil, Mustard",5,8.46,Cash,Seattle,Department Store,TRUE,Middle-Aged,Winter,Discount on Selected Items
+1000000089,3/23/2021 19:58,James Adams,"Light Bulb, Mustard, Olive Oil",8,45.75,Credit Card,New York,Pharmacy,TRUE,Senior Citizen,Summer,BOGO (Buy One Get One)
+1000000090,11/18/2023 20:40,Troy Durham,"Tissues, Spinach, Dish Soap",7,34.09,Debit Card,Los Angeles,Convenience Store,FALSE,Middle-Aged,Fall,None
+1000000091,4/3/2023 21:35,Dr. Adam Chan,"Dish Soap, Spinach, Shaving Cream, Olive Oil, Light Bulb, Ketchup, Ice Cream, Mustard, Tissues",1,41.48,Credit Card,Miami,Convenience Store,FALSE,Professional,Winter,Discount on Selected Items
+1000000092,2/8/2023 15:22,Mark Blankenship,"Bread, Light Bulb, Milk, Ketchup, Ice Cream, Mustard, Dish Soap, Spinach, Tissues, Olive Oil, Shaving Cream",4,37.38,Mobile Payment,Miami,Pharmacy,TRUE,Retiree,Spring,BOGO (Buy One Get One)
+1000000093,12/30/2023 4:04,Brooke Bennett,"Tissues, Bread, Ketchup",4,55.81,Cash,Boston,Convenience Store,FALSE,Young Adult,Summer,BOGO (Buy One Get One)
+1000000094,4/10/2021 16:00,Dale Castaneda,"Mustard, Milk, Ketchup, Tissues, Olive Oil, Spinach, Ice Cream",1,90.7,Credit Card,Chicago,Pharmacy,FALSE,Middle-Aged,Summer,BOGO (Buy One Get One)
+1000000095,2/8/2022 17:55,Jim Wells,"Light Bulb, Mustard, Bread",3,32.25,Mobile Payment,Chicago,Convenience Store,FALSE,Teenager,Summer,BOGO (Buy One Get One)
+1000000096,5/11/2021 19:50,Michael Johnson,"Ketchup, Milk, Light Bulb, Shaving Cream, Bread, Dish Soap, Tissues, Spinach, Ice Cream, Mustard",8,94.76,Cash,Seattle,Pharmacy,FALSE,Middle-Aged,Summer,Discount on Selected Items
+1000000097,7/29/2022 17:21,Lisa Delgado,"Dish Soap, Milk, Shaving Cream, Bread, Light Bulb, Ice Cream, Mustard, Tissues, Olive Oil, Ketchup",5,50.2,Mobile Payment,Miami,Warehouse Club,TRUE,Professional,Winter,None
+1000000098,10/5/2022 18:14,Matthew Jackson,"Ice Cream, Dish Soap, Shaving Cream, Mustard",8,29.4,Mobile Payment,Miami,Specialty Store,FALSE,Professional,Winter,None
+1000000099,8/1/2020 23:03,Nicholas Stephens,"Milk, Mustard, Bread, Olive Oil, Dish Soap, Ketchup, Tissues, Ice Cream",7,27.53,Credit Card,Chicago,Convenience Store,FALSE,Middle-Aged,Fall,None
+1000000100,1/15/2020 21:16,Jean Moore,"Ketchup, Mustard, Ice Cream, Dish Soap, Shaving Cream, Bread, Milk",10,71.36,Mobile Payment,Houston,Warehouse Club,FALSE,Teenager,Spring,Discount on Selected Items
+1000000101,3/15/2021 1:30,Daniel Johnson,"Mustard, Ketchup, Shaving Cream, Dish Soap, Milk, Olive Oil, Bread, Light Bulb, Spinach",8,8.22,Mobile Payment,New York,Convenience Store,FALSE,Student,Fall,None
+1000000102,10/22/2022 16:34,Maria Murray MD,"Spinach, Light Bulb, Milk, Mustard, Olive Oil, Bread",1,92.73,Credit Card,Los Angeles,Department Store,FALSE,Senior Citizen,Winter,None
+1000000103,2/10/2020 1:48,Scott Hunter,"Bread, Light Bulb, Ketchup, Dish Soap, Milk, Spinach, Shaving Cream",10,93.1,Cash,San Francisco,Convenience Store,FALSE,Professional,Summer,Discount on Selected Items
+1000000104,12/27/2022 6:34,Sean Moore,"Mustard, Ketchup, Bread, Olive Oil, Spinach",2,12.24,Cash,New York,Department Store,TRUE,Retiree,Fall,None
+1000000105,4/21/2021 3:43,Alexander Harmon,"Bread, Dish Soap, Shaving Cream, Ice Cream, Light Bulb",10,20.13,Cash,Seattle,Supermarket,TRUE,Young Adult,Summer,Discount on Selected Items
+1000000106,5/14/2022 12:06,David Rodriguez,"Mustard, Dish Soap, Olive Oil, Ice Cream, Spinach, Ketchup",8,48.09,Mobile Payment,Dallas,Pharmacy,TRUE,Retiree,Spring,BOGO (Buy One Get One)
+1000000107,1/30/2023 16:47,Linda Davis,"Ice Cream, Bread, Olive Oil, Light Bulb, Dish Soap, Spinach, Shaving Cream",2,37.71,Cash,Seattle,Pharmacy,FALSE,Retiree,Winter,Discount on Selected Items
+1000000108,10/11/2023 18:27,Linda Hayden,"Ice Cream, Ketchup, Bread, Mustard, Milk, Dish Soap, Shaving Cream",9,30.3,Credit Card,Seattle,Supermarket,FALSE,Teenager,Spring,BOGO (Buy One Get One)
+1000000109,9/24/2022 1:38,Connie Baker,"Light Bulb, Spinach, Dish Soap, Olive Oil, Tissues, Ice Cream, Mustard, Shaving Cream, Ketchup, Milk",7,57.89,Mobile Payment,Seattle,Department Store,TRUE,Middle-Aged,Winter,Discount on Selected Items
+1000000110,4/23/2021 13:09,Mr. Kenneth Watson,"Mustard, Light Bulb, Ketchup, Bread, Ice Cream, Tissues, Milk",8,15.34,Cash,Miami,Department Store,TRUE,Teenager,Winter,BOGO (Buy One Get One)
+1000000111,9/21/2022 12:12,Maurice Brown,"Dish Soap, Tissues, Milk, Bread, Olive Oil",10,90.93,Cash,Miami,Specialty Store,TRUE,Teenager,Fall,None
+1000000112,1/11/2022 11:36,William Wood,"Tissues, Milk, Bread, Spinach, Dish Soap, Shaving Cream, Ice Cream",2,63.34,Cash,Atlanta,Pharmacy,TRUE,Student,Fall,None
+1000000113,4/24/2023 1:06,Javier Ryan,"Tissues, Shaving Cream, Milk, Mustard, Spinach, Bread, Olive Oil",2,48.86,Credit Card,Miami,Supermarket,FALSE,Teenager,Spring,Discount on Selected Items
+1000000114,7/31/2021 22:35,Mr. David Casey,"Light Bulb, Olive Oil, Ice Cream, Ketchup, Tissues, Shaving Cream, Spinach, Milk",1,44.08,Debit Card,Los Angeles,Supermarket,TRUE,Teenager,Winter,None
+1000000115,12/12/2021 2:59,Ms. Megan Hicks,"Ice Cream, Spinach, Olive Oil, Bread, Light Bulb, Tissues, Milk, Ketchup, Mustard, Shaving Cream",1,79.64,Cash,San Francisco,Pharmacy,TRUE,Teenager,Fall,None
+1000000116,3/5/2024 6:13,Debbie Tucker,"Ketchup, Shaving Cream, Tissues, Spinach, Dish Soap, Ice Cream, Light Bulb, Bread, Milk, Mustard",5,43.61,Mobile Payment,San Francisco,Pharmacy,TRUE,Teenager,Fall,BOGO (Buy One Get One)
+1000000117,1/5/2021 21:56,Joseph Guzman,"Ice Cream, Bread, Milk, Ketchup, Tissues",6,25.23,Credit Card,San Francisco,Convenience Store,FALSE,Middle-Aged,Fall,BOGO (Buy One Get One)
+1000000118,4/6/2023 20:51,Xavier Tran,"Milk, Dish Soap, Ice Cream",7,13.28,Credit Card,Seattle,Specialty Store,TRUE,Teenager,Fall,None
+1000000119,6/21/2021 7:37,Janet Sullivan,"Dish Soap, Ketchup, Milk, Tissues, Light Bulb, Spinach, Olive Oil, Mustard",1,60.7,Debit Card,Atlanta,Department Store,FALSE,Retiree,Winter,None
+1000000120,2/26/2023 11:40,James Ray,"Spinach, Tissues, Dish Soap, Milk, Mustard",8,53.89,Mobile Payment,New York,Department Store,FALSE,Senior Citizen,Summer,Discount on Selected Items
+1000000121,3/21/2022 14:49,Jason Marshall,"Shaving Cream, Tissues, Dish Soap",8,14.37,Debit Card,Los Angeles,Convenience Store,FALSE,Homemaker,Winter,BOGO (Buy One Get One)
+1000000122,8/29/2020 13:41,Alexander Wright,"Mustard, Tissues, Light Bulb, Ketchup, Shaving Cream, Bread",9,56.04,Mobile Payment,Chicago,Department Store,TRUE,Student,Spring,None
+1000000123,9/17/2023 23:36,Cathy Jackson,"Shaving Cream, Ice Cream, Olive Oil, Bread, Ketchup, Dish Soap, Milk, Mustard, Light Bulb",4,44.49,Credit Card,Miami,Department Store,FALSE,Homemaker,Spring,BOGO (Buy One Get One)
+1000000124,8/21/2023 7:05,Mercedes Anderson,"Olive Oil, Spinach, Bread, Ice Cream, Ketchup, Shaving Cream, Mustard, Tissues",7,66.28,Debit Card,Miami,Supermarket,FALSE,Homemaker,Fall,None
+1000000125,5/2/2021 14:10,Anthony Christensen,"Shaving Cream, Milk, Ketchup, Bread, Dish Soap, Mustard, Ice Cream, Olive Oil, Spinach, Tissues",8,23.96,Cash,Chicago,Convenience Store,TRUE,Young Adult,Spring,None
+1000000126,8/10/2022 0:26,Cameron Walker,"Milk, Tissues, Ketchup, Olive Oil, Light Bulb, Shaving Cream, Mustard, Spinach, Ice Cream, Dish Soap, Bread",10,68.06,Debit Card,San Francisco,Department Store,TRUE,Professional,Winter,None
+1000000127,6/2/2021 5:16,Paul Brown,"Light Bulb, Bread, Ketchup, Olive Oil, Milk",7,33.04,Cash,Boston,Pharmacy,TRUE,Professional,Spring,BOGO (Buy One Get One)
+1000000128,4/30/2024 2:08,Kimberly Stevens,"Spinach, Ice Cream, Bread, Milk, Light Bulb, Ketchup",6,34.28,Cash,Los Angeles,Warehouse Club,FALSE,Professional,Fall,None
+1000000129,10/28/2020 23:23,Jordan Garcia,"Ketchup, Bread, Olive Oil",4,24.12,Mobile Payment,Houston,Supermarket,TRUE,Retiree,Summer,Discount on Selected Items
+1000000130,9/8/2022 7:32,Ryan Joseph II,"Shaving Cream, Spinach, Mustard, Milk, Tissues, Ketchup, Light Bulb, Ice Cream, Olive Oil",8,9.31,Credit Card,Miami,Supermarket,FALSE,Middle-Aged,Winter,BOGO (Buy One Get One)
+1000000131,9/2/2022 23:11,Debbie Brown,"Ice Cream, Tissues, Dish Soap, Light Bulb, Shaving Cream",10,86.98,Mobile Payment,Boston,Department Store,FALSE,Senior Citizen,Summer,BOGO (Buy One Get One)
+1000000132,4/18/2021 21:43,Dawn Pratt,"Ketchup, Bread, Milk, Spinach, Ice Cream, Light Bulb",5,83.34,Mobile Payment,Atlanta,Convenience Store,FALSE,Senior Citizen,Spring,Discount on Selected Items
+1000000133,7/8/2022 20:10,Madison Hill,"Ice Cream, Bread, Shaving Cream, Dish Soap, Spinach, Light Bulb, Mustard, Ketchup, Olive Oil, Tissues",6,40.37,Debit Card,Boston,Department Store,FALSE,Teenager,Winter,Discount on Selected Items
+1000000134,10/28/2020 3:12,Kelly Atkinson,"Ketchup, Milk, Dish Soap, Ice Cream, Shaving Cream, Olive Oil, Tissues, Spinach, Light Bulb, Bread",1,7.14,Mobile Payment,Atlanta,Department Store,FALSE,Teenager,Spring,Discount on Selected Items
+1000000135,5/4/2020 9:30,Patricia Fuller,"Ketchup, Bread, Mustard, Light Bulb, Milk, Olive Oil, Spinach, Dish Soap, Tissues, Shaving Cream",1,56.7,Mobile Payment,Seattle,Specialty Store,FALSE,Professional,Fall,BOGO (Buy One Get One)
+1000000136,2/26/2021 11:14,Debra Brown,"Ice Cream, Mustard, Milk, Bread, Dish Soap, Olive Oil",9,90.9,Credit Card,Chicago,Department Store,FALSE,Teenager,Fall,Discount on Selected Items
+1000000137,11/2/2023 9:25,Brett Hernandez,"Shaving Cream, Olive Oil, Milk, Tissues",9,59.02,Mobile Payment,Chicago,Specialty Store,FALSE,Professional,Winter,BOGO (Buy One Get One)
+1000000138,4/7/2021 10:10,Diane Hughes,"Bread, Ketchup, Milk, Ice Cream",3,36.46,Mobile Payment,Dallas,Warehouse Club,TRUE,Middle-Aged,Spring,None
+1000000139,11/3/2022 2:17,Jeffrey Jones,"Tissues, Ice Cream, Olive Oil, Spinach, Milk, Bread, Light Bulb",2,73.35,Credit Card,Dallas,Specialty Store,FALSE,Senior Citizen,Winter,None
+1000000140,12/8/2020 16:09,Frank Torres,"Light Bulb, Spinach, Dish Soap, Bread, Tissues, Milk, Mustard, Olive Oil, Ice Cream",5,52.95,Mobile Payment,San Francisco,Pharmacy,TRUE,Teenager,Summer,None
+1000000141,3/5/2023 4:11,Daniel Mcguire,"Dish Soap, Milk, Mustard, Bread, Tissues, Spinach, Ice Cream",1,77.42,Credit Card,Miami,Warehouse Club,TRUE,Professional,Fall,None
+1000000142,3/18/2023 16:05,Russell Harmon,"Tissues, Shaving Cream, Olive Oil, Ketchup, Spinach, Bread, Ice Cream, Dish Soap, Mustard",7,53.23,Cash,Miami,Specialty Store,FALSE,Student,Summer,BOGO (Buy One Get One)
+1000000143,4/4/2024 5:28,John Benitez,"Tissues, Olive Oil, Milk, Bread",4,71.54,Credit Card,Miami,Department Store,TRUE,Teenager,Fall,Discount on Selected Items
+1000000144,11/19/2022 23:47,Wesley Delacruz,"Dish Soap, Milk, Mustard, Olive Oil, Spinach",6,78.93,Cash,San Francisco,Pharmacy,TRUE,Teenager,Fall,None
+1000000145,2/7/2023 2:49,Shannon Reid,"Dish Soap, Ice Cream, Tissues, Olive Oil, Shaving Cream, Light Bulb, Spinach",4,76.86,Mobile Payment,Seattle,Convenience Store,TRUE,Student,Summer,Discount on Selected Items
+1000000146,12/31/2022 19:41,Steven Brown,"Spinach, Milk, Shaving Cream, Ketchup, Bread, Olive Oil, Ice Cream, Dish Soap, Mustard, Light Bulb, Tissues",2,25.04,Debit Card,Miami,Pharmacy,TRUE,Senior Citizen,Winter,Discount on Selected Items
+1000000147,3/18/2021 13:20,Harold Miller,"Tissues, Spinach, Milk, Mustard",1,62.25,Cash,Los Angeles,Warehouse Club,TRUE,Middle-Aged,Spring,Discount on Selected Items
+1000000148,7/28/2023 8:34,Jessica Middleton,"Shaving Cream, Bread, Olive Oil, Ketchup, Spinach",6,45.81,Debit Card,Chicago,Department Store,FALSE,Middle-Aged,Winter,None
+1000000149,4/11/2021 4:00,Luke Bell,"Mustard, Milk, Shaving Cream, Olive Oil, Bread, Spinach, Ice Cream, Ketchup, Tissues, Light Bulb, Dish Soap",4,47.73,Debit Card,Houston,Warehouse Club,TRUE,Retiree,Summer,Discount on Selected Items
+1000000150,9/22/2020 10:18,James Morales,"Mustard, Spinach, Ice Cream, Light Bulb, Olive Oil, Shaving Cream, Tissues, Bread, Ketchup, Milk, Dish Soap",2,58.89,Debit Card,Seattle,Specialty Store,FALSE,Professional,Winter,None
+1000000151,4/17/2021 12:55,Ian Wilkinson,"Mustard, Ketchup, Tissues, Spinach, Milk, Light Bulb, Bread",9,65.15,Debit Card,San Francisco,Department Store,TRUE,Middle-Aged,Summer,BOGO (Buy One Get One)
+1000000152,7/28/2020 4:10,Jason Andrade,"Milk, Ice Cream, Mustard, Ketchup, Light Bulb, Shaving Cream",8,73.23,Credit Card,Los Angeles,Supermarket,TRUE,Professional,Fall,None
+1000000153,12/11/2023 12:45,Zachary Anderson,"Dish Soap, Bread, Ice Cream, Mustard, Olive Oil, Milk, Ketchup",10,54.02,Cash,New York,Pharmacy,TRUE,Teenager,Spring,BOGO (Buy One Get One)
+1000000154,9/20/2023 21:00,Michael Perkins,"Olive Oil, Ice Cream, Ketchup, Light Bulb",9,87.79,Credit Card,Seattle,Warehouse Club,FALSE,Young Adult,Summer,Discount on Selected Items
+1000000155,4/18/2020 1:29,Andre Davis,"Dish Soap, Olive Oil, Mustard, Ketchup, Spinach, Shaving Cream, Milk",6,36.1,Mobile Payment,Los Angeles,Supermarket,FALSE,Senior Citizen,Fall,Discount on Selected Items
+1000000156,10/9/2023 12:34,Heather Le,"Ice Cream, Light Bulb, Milk, Ketchup, Spinach, Olive Oil, Tissues, Bread",7,98.26,Cash,Dallas,Convenience Store,FALSE,Middle-Aged,Fall,Discount on Selected Items
+1000000157,10/11/2021 3:22,Morgan Black,"Light Bulb, Bread, Mustard, Shaving Cream",6,44.73,Mobile Payment,San Francisco,Warehouse Club,TRUE,Teenager,Winter,None
+1000000158,3/19/2023 13:07,Chelsea Harding,"Light Bulb, Dish Soap, Milk, Tissues, Shaving Cream, Mustard, Olive Oil, Bread, Ice Cream, Ketchup",5,35.83,Debit Card,Seattle,Warehouse Club,TRUE,Senior Citizen,Summer,BOGO (Buy One Get One)
+1000000159,11/20/2021 9:58,Tracy Bruce,"Light Bulb, Spinach, Dish Soap, Tissues, Olive Oil, Bread, Ketchup",9,64.32,Mobile Payment,Miami,Warehouse Club,TRUE,Middle-Aged,Spring,Discount on Selected Items
+1000000160,2/28/2024 14:41,Michael Perez,"Bread, Light Bulb, Ketchup, Shaving Cream, Milk, Mustard, Olive Oil, Ice Cream, Spinach",9,71.79,Mobile Payment,New York,Supermarket,FALSE,Senior Citizen,Summer,BOGO (Buy One Get One)
+1000000161,3/10/2022 22:42,Ryan Atkinson,"Bread, Mustard, Milk, Light Bulb, Tissues, Spinach, Shaving Cream, Ketchup, Olive Oil, Dish Soap, Ice Cream",9,86.43,Mobile Payment,Miami,Specialty Store,TRUE,Retiree,Summer,None
+1000000162,10/26/2022 23:16,Trevor Miller,"Ice Cream, Light Bulb, Dish Soap, Milk",5,57.3,Mobile Payment,Chicago,Pharmacy,TRUE,Senior Citizen,Winter,BOGO (Buy One Get One)
+1000000163,8/20/2020 15:17,Lisa Taylor,"Tissues, Ice Cream, Light Bulb, Shaving Cream, Milk",6,21.9,Cash,Chicago,Specialty Store,FALSE,Young Adult,Winter,Discount on Selected Items
+1000000164,12/3/2023 3:08,Erik Russell,"Light Bulb, Spinach, Ice Cream, Shaving Cream",7,53.99,Cash,Los Angeles,Department Store,TRUE,Middle-Aged,Winter,None
+1000000165,4/25/2021 5:04,Ms. Bianca Larson DDS,"Ice Cream, Olive Oil, Light Bulb, Tissues, Shaving Cream, Ketchup, Spinach, Bread, Mustard",10,38.13,Mobile Payment,New York,Department Store,FALSE,Young Adult,Summer,Discount on Selected Items
+1000000166,4/24/2024 21:49,Gary Jones,"Ketchup, Mustard, Light Bulb, Olive Oil, Dish Soap, Bread, Ice Cream, Milk",5,53.09,Cash,Dallas,Department Store,FALSE,Professional,Fall,BOGO (Buy One Get One)
+1000000167,10/24/2020 14:25,Douglas Gray,"Mustard, Bread, Ketchup, Spinach, Dish Soap",8,82.66,Cash,Los Angeles,Specialty Store,TRUE,Homemaker,Summer,None
+1000000168,6/28/2020 18:14,Lori Davis,"Tissues, Milk, Ketchup",4,63.4,Credit Card,Seattle,Convenience Store,TRUE,Middle-Aged,Spring,None
+1000000169,6/24/2023 14:37,Kelly Hall MD,"Spinach, Ketchup, Mustard, Olive Oil",9,20.51,Debit Card,New York,Pharmacy,FALSE,Teenager,Spring,BOGO (Buy One Get One)
+1000000170,9/3/2023 18:28,Scott Johnson,"Milk, Bread, Shaving Cream, Ketchup, Dish Soap, Ice Cream, Spinach, Mustard",7,35.13,Mobile Payment,Dallas,Department Store,FALSE,Homemaker,Spring,None
+1000000171,2/14/2023 22:57,Regina Andersen,"Tissues, Milk, Bread, Ketchup, Olive Oil, Shaving Cream, Light Bulb, Spinach, Mustard, Dish Soap",7,55.45,Mobile Payment,Los Angeles,Warehouse Club,TRUE,Senior Citizen,Winter,Discount on Selected Items
+1000000172,8/27/2021 21:54,Jennifer Schmidt,"Ice Cream, Bread, Tissues, Mustard, Milk",9,43.37,Credit Card,Seattle,Pharmacy,TRUE,Homemaker,Summer,Discount on Selected Items
+1000000173,11/11/2020 23:34,Manuel Drake,"Light Bulb, Spinach, Dish Soap, Ice Cream, Ketchup, Milk, Olive Oil, Tissues, Mustard, Shaving Cream, Bread",7,51.27,Mobile Payment,Dallas,Convenience Store,FALSE,Middle-Aged,Summer,None
+1000000174,4/16/2021 22:38,James Ho DDS,"Ketchup, Shaving Cream, Olive Oil, Bread, Tissues, Ice Cream, Dish Soap, Spinach, Mustard",3,34.82,Cash,Seattle,Convenience Store,TRUE,Student,Summer,None
+1000000175,4/7/2024 21:08,Ryan Snow,"Spinach, Olive Oil, Tissues, Bread, Shaving Cream, Milk, Dish Soap",2,90.68,Cash,Seattle,Convenience Store,TRUE,Teenager,Winter,BOGO (Buy One Get One)
+1000000176,1/23/2023 7:31,Jessica Nolan,"Light Bulb, Mustard, Ketchup, Spinach, Bread, Milk, Olive Oil",8,85.09,Debit Card,Seattle,Warehouse Club,TRUE,Homemaker,Fall,Discount on Selected Items
+1000000177,11/13/2022 20:33,Joann Davies,"Spinach, Ketchup, Dish Soap",1,31.59,Credit Card,Chicago,Pharmacy,FALSE,Senior Citizen,Winter,None
+1000000178,3/17/2024 0:34,Lori Hill,"Spinach, Ketchup, Light Bulb, Tissues, Mustard, Ice Cream, Dish Soap",8,75.06,Debit Card,Chicago,Specialty Store,FALSE,Professional,Winter,Discount on Selected Items
+1000000179,12/16/2021 19:32,Trevor Jenkins,"Spinach, Light Bulb, Ketchup, Mustard, Dish Soap, Bread",5,45.77,Debit Card,San Francisco,Pharmacy,TRUE,Middle-Aged,Fall,BOGO (Buy One Get One)
+1000000180,6/21/2021 5:47,Jose Baker,"Bread, Dish Soap, Spinach, Mustard, Ice Cream, Light Bulb, Ketchup, Tissues, Milk",3,33.17,Mobile Payment,Los Angeles,Supermarket,FALSE,Retiree,Spring,BOGO (Buy One Get One)
+1000000181,12/5/2020 1:54,Courtney Meyer,"Olive Oil, Mustard, Shaving Cream, Spinach, Milk",10,12.81,Debit Card,Chicago,Convenience Store,TRUE,Young Adult,Winter,BOGO (Buy One Get One)
+1000000182,11/18/2020 8:26,John Burton,"Tissues, Milk, Dish Soap, Ice Cream, Mustard, Shaving Cream, Spinach, Ketchup",2,74.81,Credit Card,New York,Supermarket,TRUE,Young Adult,Fall,Discount on Selected Items
+1000000183,12/31/2021 1:19,Janet Robinson,"Light Bulb, Ketchup, Mustard, Olive Oil, Bread, Spinach, Shaving Cream, Milk, Dish Soap, Tissues, Ice Cream",1,74.53,Debit Card,San Francisco,Department Store,FALSE,Middle-Aged,Fall,BOGO (Buy One Get One)
+1000000184,3/9/2022 4:31,Mitchell Jackson,"Shaving Cream, Ice Cream, Ketchup, Spinach, Light Bulb, Bread",6,6.4,Mobile Payment,Atlanta,Warehouse Club,TRUE,Professional,Winter,Discount on Selected Items
+1000000185,3/31/2020 5:22,Paula Gutierrez,"Ice Cream, Spinach, Olive Oil, Shaving Cream",9,80.32,Mobile Payment,Los Angeles,Warehouse Club,TRUE,Homemaker,Spring,None
+1000000186,1/6/2022 8:14,Rebecca Rice,"Ketchup, Ice Cream, Mustard, Milk, Bread, Light Bulb, Shaving Cream, Olive Oil",3,83.91,Cash,San Francisco,Pharmacy,TRUE,Homemaker,Spring,BOGO (Buy One Get One)
+1000000187,9/15/2022 21:05,Samantha Wallace,"Mustard, Ketchup, Bread, Shaving Cream, Light Bulb, Olive Oil, Milk, Ice Cream, Tissues",5,58.92,Mobile Payment,Dallas,Supermarket,FALSE,Retiree,Fall,None
+1000000188,9/13/2022 5:58,Luke Hall,"Olive Oil, Tissues, Dish Soap, Shaving Cream, Spinach, Light Bulb",5,97.89,Mobile Payment,Los Angeles,Department Store,TRUE,Middle-Aged,Winter,Discount on Selected Items
+1000000189,3/28/2021 23:25,Michael Gonzalez,"Olive Oil, Dish Soap, Mustard, Ketchup, Light Bulb, Bread, Spinach, Milk, Ice Cream, Shaving Cream",6,54.23,Credit Card,Seattle,Convenience Store,FALSE,Retiree,Winter,BOGO (Buy One Get One)
+1000000190,1/14/2024 10:01,Tyler Smith,"Milk, Spinach, Olive Oil, Dish Soap, Bread, Mustard, Light Bulb, Shaving Cream, Ice Cream, Tissues, Ketchup",5,5.78,Mobile Payment,Chicago,Specialty Store,FALSE,Student,Summer,BOGO (Buy One Get One)
+1000000191,2/11/2020 11:41,Terry Norman,"Bread, Olive Oil, Ice Cream, Mustard, Dish Soap, Ketchup, Shaving Cream",9,62.26,Debit Card,San Francisco,Specialty Store,TRUE,Retiree,Fall,None
+1000000192,4/26/2024 0:16,Cody Cobb,"Ketchup, Light Bulb, Ice Cream, Olive Oil, Spinach, Dish Soap",1,99.16,Debit Card,Houston,Warehouse Club,FALSE,Retiree,Winter,None
+1000000193,10/13/2020 15:30,Sierra Scott,"Mustard, Ketchup, Milk, Tissues, Dish Soap, Ice Cream, Light Bulb, Bread, Spinach, Shaving Cream, Olive Oil",6,32.23,Debit Card,Boston,Department Store,TRUE,Retiree,Fall,Discount on Selected Items
+1000000194,7/24/2020 6:17,Emily Underwood,"Mustard, Dish Soap, Milk, Spinach, Ice Cream, Light Bulb, Shaving Cream, Tissues, Bread, Ketchup, Olive Oil",10,39.68,Cash,Houston,Pharmacy,FALSE,Senior Citizen,Winter,None
+1000000195,4/1/2023 14:19,Arthur Myers,"Tissues, Ice Cream, Mustard, Olive Oil, Light Bulb, Bread, Dish Soap",8,41.12,Mobile Payment,Miami,Supermarket,FALSE,Student,Fall,Discount on Selected Items
+1000000196,4/24/2022 4:38,Nicole Cantrell,"Spinach, Shaving Cream, Ice Cream, Tissues, Ketchup, Light Bulb, Bread",8,36.12,Cash,Dallas,Department Store,FALSE,Middle-Aged,Winter,Discount on Selected Items
+1000000197,6/4/2022 19:22,John Martin,"Mustard, Ketchup, Shaving Cream, Spinach, Light Bulb, Milk, Dish Soap",10,84.07,Cash,Miami,Pharmacy,FALSE,Homemaker,Spring,None
+1000000198,1/26/2021 5:46,Jerry Williams,"Milk, Spinach, Ice Cream, Ketchup, Light Bulb, Tissues, Shaving Cream, Olive Oil, Mustard, Bread",4,39.56,Debit Card,Chicago,Supermarket,TRUE,Retiree,Winter,None
