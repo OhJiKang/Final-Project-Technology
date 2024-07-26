@@ -37,7 +37,7 @@ def AER_Transaction_Rules(transactions,minsup=0.03,minlift=0.04,minconf=0.02):
         for candidate in map_candidates:
             for pattern, instances in candidate.items():
                 for attr in attribute_list:
-                    if attr > pattern[-1]:
+                    if attr >= pattern[-1]:
                         new_pattern = pattern + (attr,)
                         new_support = calculate_support(new_pattern, frequencies)
                         support = new_support / sum(frequencies.values())

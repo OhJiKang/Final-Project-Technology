@@ -2,7 +2,7 @@ import itertools
 import pandas as pd
 from mlxtend.preprocessing import TransactionEncoder
 from mlxtend.frequent_patterns import apriori, association_rules,fpgrowth
-from util.find_top_k_subgraph.find_top_k_subgraph import find_top_k_subgraphs
+from util.find_top_k_subgraph.find_top_k_subgraph import find_top_k_subgraphs,find_top_k_subgraphs_author
 from util.find_subgraph_with_number_items.find_subgraph_with_number_items import find_subgraph_with_number_items
 from util.execute_transaction.execute_transaction import transform_transaction
 
@@ -49,17 +49,14 @@ def visualize_graph(file_path,K):
 def visualize_graph_2(file_path,K):
         transactions = transform_transaction(file_path)
         # Process transactions
-        min_support = 0.3
-        numofitem=2
-        print("Calculating_Subgraph")
-        frequent_subgraphs = find_top_k_subgraphs(transactions,K,min_support)
-        top_k_subgraphs = frequent_subgraphs[:K]
+        min_support = 10
+
+        top_k_subgraphs = find_top_k_subgraphs_author(transactions,K,min_support)
         # Flatten the list of lists and remove duplicates
         # unique_items = set(item.strip() for sublist in top_k_subgraphs for item in sublist)
         # Step 6: Return data to visualize
         nodes = [{'id': item} for subgraph, support in top_k_subgraphs for item in subgraph]
         nodes = {node['id']: node for node in nodes}.values()
-
         edges = []
         color_space = [
         'red', 'green', 'blue', 'orange', 'purple', 
