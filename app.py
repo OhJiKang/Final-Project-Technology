@@ -1,6 +1,7 @@
 import itertools
 from flask import Flask, render_template, request, jsonify
 import pandas as pd
+import pyodbc # Thư viện kết nối SQL Server
 from mlxtend.preprocessing import TransactionEncoder
 from mlxtend.frequent_patterns import apriori, association_rules,fpgrowth
 import os
@@ -14,6 +15,31 @@ import util as util
 from flask import session
 
 app = Flask(__name__)
+
+# Khai báo connection string
+connection_string = (
+    "DRIVER={ODBC Driver 17 for SQL Server};"
+    "SERVER=LAPTOP-U1R4N9B7;" #@TODO: Đổi tên server
+    "DATABASE=GraphMiningDB;" #@TODO: Đổi tên database
+    "TRUSTED_CONNECTION=yes;"
+)
+# Hàm lấy data từ table Account
+def get_accounts():
+    try:
+        connection = pyodbc.connect(connection_string)
+        cursor = connection.cursor()
+        
+        cursor.execute("SELECT * FROM Account;")
+
+        accounts = cursor.fetchall()
+
+        cursor.close()
+        connection.close()
+        return accounts
+    except Exception as e:
+        print("Connection to SQL Server failed. Error: ", e)
+        return []
+
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 import logging
@@ -40,11 +66,10 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-
-
 @app.route('/')
 def index_view():
-    return render_template('landing_page/index.html')
+    accounts = get_accounts() # Lấy dữ liệu từ table Account
+    return render_template('landing_page/index.html', accounts=accounts)
 
 @app.route('/visualize_graph_1')
 def visualize_graph_1_view():
@@ -138,6 +163,6 @@ def get_unique_items_from_files():
         unique_items=list(get_all_unique_item_from_transaction(file_path))
         return jsonify(unique_items)
     return jsonify({'error': 'Invalid file format'})
+
 if __name__ == '__main__':
     app.run(debug=True)
-
