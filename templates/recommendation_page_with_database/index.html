@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block content %} {% include 'navigation.html' %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/recommendation_page_with_database.css') }}" />
+
+<div id="wrapper">
+    <div class="container">
+        <h2 class="text-center">Find Best Recommendation</h2>
+        <div id="recommendationForm">
+            <div class="available_choosing">
+                <h5 for="item" class="text-center text-dark">Item Available For Choosing:</label>
+                <div class="item_container_choosing">
+                    {% for items in uniqueItems %}
+                    <span class="bg-info available_choosing">{{items}}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mb-4">
+                <button type="submit" class="find_recommended_items_btn btn btn-lg btn-info text-white">
+                    Find Recommendation
+                </button>
+            </div>
+            <h5 for="item" class="text-center text-dark">Item Recommended:</h5>
+            <div class="item_recommended d-flex justify-content-center"></div>
+            <br />
+        </div>
+        <div id="result"></div>
+    </div>
+</div>
+
+<script src="{{url_for('static', filename='JS/recommendation_page_with_database.js')}}"></script>
+
+{% endblock %}

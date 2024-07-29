@@ -19,25 +19,27 @@ def calculate_lift(antecedent, consequent, frequencies):
     total_support = sum(frequencies.values())
     expected_confidence = (antecedent_support / total_support) * (consequent_support / total_support)
     return rule_support / (expected_confidence * total_support) if expected_confidence else 0
-
-
 def AER_Transaction_Rules(transactions,minsup=0.03,minlift=0.04,minconf=0.02):
     # Extract items and their frequencies
+    attribute_list=set()
     frequencies = {tuple(sublist): freq for sublist, freq in transactions}
-    # Get unique items
-    attribute_list = sorted(set(itertools.chain(*[list(item) for item in frequencies.keys()])))
-
+    # Get unique items without sorting
+    for transaction in transactions:
+        listArr=transaction[0]
+        for node in listArr:
+            attribute_list.add(node)
+    attribute_list=list(attribute_list)
     # Initialize core patterns
-    map_candidates = [{tuple([attr]): frequencies} for attr in attribute_list]
+    map_candidates = [{tuple([attr])} for attr in attribute_list]
     # Step 2: Pattern Growth
     list_patterns = []
     k = 1
     while map_candidates:
         new_map_candidates = []
         for candidate in map_candidates:
-            for pattern, instances in candidate.items():
+            for pattern in candidate:
                 for attr in attribute_list:
-                    if attr >= pattern[-1]:
+                    if attr not in pattern:
                         new_pattern = pattern + (attr,)
                         new_support = calculate_support(new_pattern, frequencies)
                         support = new_support / sum(frequencies.values())
@@ -59,32 +61,34 @@ def AER_Transaction_Rules(transactions,minsup=0.03,minlift=0.04,minconf=0.02):
     return list_patterns
 def AER_Transaction_Rules_Without_Condition(transactions):
     # Extract items and their frequencies
+    attribute_list=set()
     frequencies = {tuple(sublist): freq for sublist, freq in transactions}
-    # Get unique items
-    attribute_list = sorted(set(itertools.chain(*[list(item) for item in frequencies.keys()])))
-
+    # Get unique items without sorting
+    for transaction in transactions:
+        listArr=transaction[0]
+        for node in listArr:
+            attribute_list.add(node)
+    attribute_list=list(attribute_list)
     # Initialize core patterns
-    map_candidates = [{tuple([attr]): frequencies} for attr in attribute_list]
-
+    map_candidates = [{tuple([attr])} for attr in attribute_list]
     # Step 2: Pattern Growth
     list_patterns = []
     k = 1
-
     while map_candidates:
         new_map_candidates = []
         for candidate in map_candidates:
-            for pattern, instances in candidate.items():
+            for pattern in candidate:
                 for attr in attribute_list:
-                    if attr > pattern[-1]:
+                    if attr not in pattern:
                         new_pattern = pattern + (attr,)
                         new_support = calculate_support(new_pattern, frequencies)
                         support = new_support / sum(frequencies.values())
-                        if support > 0:
+                        if support >= 0:
                             confidence = calculate_confidence(pattern, (attr,), frequencies)
                             lift = calculate_lift(pattern, (attr,), frequencies)
-                            if lift > 0:
+                            if lift >= 0:
                                 new_map_candidates.append({new_pattern: frequencies})
-                                if confidence > 0:
+                                if confidence >= 0:
                                     list_patterns.append({
                                         'antecedent': list(pattern),
                                         'consequent': [attr],

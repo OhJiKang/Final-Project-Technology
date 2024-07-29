@@ -103,6 +103,4 @@ def find_top_k_subgraphs_author(transactions, k, min_support):
                             Qk.pop(0)  # Remove the subgraph with the least support if Qk exceeds size k
     # Return top-k subgraphs with their support
     top_k_results = [(list(subgraph), support) for support, subgraph in Qk]
-    
-
     return top_k_results

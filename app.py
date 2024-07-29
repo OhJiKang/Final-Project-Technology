@@ -1,44 +1,21 @@
 import itertools
 from flask import Flask, render_template, request, jsonify
 import pandas as pd
-import pyodbc # Thư viện kết nối SQL Server
 from mlxtend.preprocessing import TransactionEncoder
 from mlxtend.frequent_patterns import apriori, association_rules,fpgrowth
 import os
-import util.finding_best_recommendation
 from util.visualize_graph.visualize_graph import visualize_graph,visualize_graph_2,visualize_graph_3
-from util.finding_best_recommendation.finding_best_recommendation import find_best_recommendation_item
+from util.finding_best_recommendation.finding_best_recommendation import find_best_recommendation_item,find_best_recommendation_item_with_database
 from util.execute_transaction.execute_transaction import get_all_unique_item_from_transaction
-
+from Controllers.executeTransaction import executeTransaction,getUniqueItemsFromDatabase
 import util as util
 
 from flask import session
 
 app = Flask(__name__)
 
-# Khai báo connection string
-connection_string = (
-    "DRIVER={ODBC Driver 17 for SQL Server};"
-    "SERVER=LAPTOP-U1R4N9B7;" #@TODO: Đổi tên server
-    "DATABASE=GraphMiningDB;" #@TODO: Đổi tên database
-    "TRUSTED_CONNECTION=yes;"
-)
 # Hàm lấy data từ table Account
-def get_accounts():
-    try:
-        connection = pyodbc.connect(connection_string)
-        cursor = connection.cursor()
-        
-        cursor.execute("SELECT * FROM Account;")
 
-        accounts = cursor.fetchall()
-
-        cursor.close()
-        connection.close()
-        return accounts
-    except Exception as e:
-        print("Connection to SQL Server failed. Error: ", e)
-        return []
 
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
@@ -68,8 +45,7 @@ def create_app(test_config=None):
 
 @app.route('/')
 def index_view():
-    accounts = get_accounts() # Lấy dữ liệu từ table Account
-    return render_template('landing_page/index.html', accounts=accounts)
+    return render_template('landing_page/index.html')
 
 @app.route('/visualize_graph_1')
 def visualize_graph_1_view():
@@ -83,6 +59,10 @@ def visualize_graph_2_view():
 def recommendation_page_view():
     return render_template('recommendation_page/index.html', active_page='recommendation_page')
 
+@app.route('/finding_best_recommendation_with_database')
+def recommendation_with_database_page_view():
+    uniqueItems=getUniqueItemsFromDatabase()
+    return render_template('recommendation_page_with_database/index.html', active_page='recommendation_page_with_database',uniqueItems=uniqueItems)
 @app.route('/get_unique_items')
 def get_unique_items_view():
     return render_template('get_unique_items/index.html', active_page='get_unique_items')
@@ -138,7 +118,6 @@ def finding_best_recommendation_render():
     if 'file' not in request.files:
         return jsonify({'error': 'No file part'})
     file = request.files['file']
-    num_of_item = int(request.form['num_of_item'])
     item=str(request.form["item"]).split(",")
     if file.filename == '':
         return jsonify({'error': 'No selected file'})
@@ -146,9 +125,16 @@ def finding_best_recommendation_render():
         tempdir = os.path.join(os.path.dirname(__file__), 'temp')
         file_path = os.path.join(tempdir, file.filename)
         file.save(file_path)
-        best_rule=find_best_recommendation_item(item,file_path,num_of_item,0.3)
+        best_rule=find_best_recommendation_item(item,file_path,0.3)
         return jsonify(best_rule)
     return jsonify({'error': 'Invalid file format'})
+
+@app.route('/finding_best_recommendation_with_database', methods=['POST'])
+def finding_best_recommendation_with_database_render():
+    file = executeTransaction()
+    item=str(request.form["item"]).split(",")
+    best_rule=find_best_recommendation_item_with_database(item,file,0.3)
+    return jsonify(best_rule)
 @app.route('/get_unique_items_from_files', methods=['POST'])
 def get_unique_items_from_files():
     if 'file' not in request.files:
