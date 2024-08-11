@@ -77,12 +77,10 @@ def visualize_graph_2(file_path,K):
 
         return graph_data
 
-def visualize_graph_3(file_path,K):
+def visualize_graph_3(file_path,num_of_item):
         transactions = transform_transaction(file_path)
         # Process transactions
-        min_support = 0.3
-        print("Calculating_Subgraph")
-        frequent_subgraphs = find_subgraph_with_number_items(transactions,K,min_support)
+        frequent_subgraphs = find_subgraph_with_number_items(transactions,num_of_item)
         # Flatten the list of lists and remove duplicates
         # unique_items = set(item.strip() for sublist in top_k_subgraphs for item in sublist)
         # Step 6: Return data to visualize

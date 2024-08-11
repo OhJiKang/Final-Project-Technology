@@ -19,7 +19,9 @@ def calculate_lift(antecedent, consequent, frequencies):
     total_support = sum(frequencies.values())
     expected_confidence = (antecedent_support / total_support) * (consequent_support / total_support)
     return rule_support / (expected_confidence * total_support) if expected_confidence else 0
-def AER_Transaction_Rules(transactions,minsup=0.03,minlift=0.04,minconf=0.02):
+def AER_Transaction_Rules(transactions,items,minsup=0.01,minlift=0.04,minconf=0.02):
+    
+    newSetItems=tuple(item.strip().lower() for item in items)
     # Extract items and their frequencies
     attribute_list=set()
     frequencies = {tuple(sublist): freq for sublist, freq in transactions}
@@ -41,25 +43,28 @@ def AER_Transaction_Rules(transactions,minsup=0.03,minlift=0.04,minconf=0.02):
                 for attr in attribute_list:
                     if attr not in pattern:
                         new_pattern = pattern + (attr,)
-                        new_support = calculate_support(new_pattern, frequencies)
-                        support = new_support / sum(frequencies.values())
-                        if support >= minsup:
-                            confidence = calculate_confidence(pattern, (attr,), frequencies)
-                            lift = calculate_lift(pattern, (attr,), frequencies)
-                            if lift >= minlift:
-                                new_map_candidates.append({new_pattern: frequencies})
-                                if confidence >= minconf:
-                                    list_patterns.append({
-                                        'antecedent': list(pattern),
-                                        'consequent': [attr],
-                                        'support': support,
-                                        'confidence': confidence,
-                                        'lift': lift
-                                    })
+                        intersection = set(new_pattern).intersection(newSetItems)
+                        if intersection:
+                            new_support = calculate_support(new_pattern, frequencies)
+                            support = new_support / sum(frequencies.values())
+                            if support >= minsup:
+                                confidence = calculate_confidence(pattern, (attr,), frequencies)
+                                lift = calculate_lift(pattern, (attr,), frequencies)
+                                if lift >= minlift:
+                                    new_map_candidates.append({new_pattern: frequencies})
+                                    if confidence >= minconf:
+                                        list_patterns.append({
+                                            'antecedent': list(pattern),
+                                            'consequent': [attr],
+                                            'support': support,
+                                            'confidence': confidence,
+                                            'lift': lift
+                                        })
         map_candidates = new_map_candidates
         k += 1
     return list_patterns
-def AER_Transaction_Rules_Without_Condition(transactions):
+def AER_Transaction_Rules_Without_Condition(transactions,items):
+    newSetItems=tuple(item.strip().lower() for item in items)
     # Extract items and their frequencies
     attribute_list=set()
     frequencies = {tuple(sublist): freq for sublist, freq in transactions}
@@ -81,21 +86,23 @@ def AER_Transaction_Rules_Without_Condition(transactions):
                 for attr in attribute_list:
                     if attr not in pattern:
                         new_pattern = pattern + (attr,)
-                        new_support = calculate_support(new_pattern, frequencies)
-                        support = new_support / sum(frequencies.values())
-                        if support >= 0:
-                            confidence = calculate_confidence(pattern, (attr,), frequencies)
-                            lift = calculate_lift(pattern, (attr,), frequencies)
-                            if lift >= 0:
-                                new_map_candidates.append({new_pattern: frequencies})
-                                if confidence >= 0:
-                                    list_patterns.append({
-                                        'antecedent': list(pattern),
-                                        'consequent': [attr],
-                                        'support': support,
-                                        'confidence': confidence,
-                                        'lift': lift
-                                    })
+                        intersection = set(new_pattern).intersection(newSetItems)
+                        if intersection:
+                            new_support = calculate_support(new_pattern, frequencies)
+                            support = new_support / sum(frequencies.values())
+                            if support > 0:
+                                confidence = calculate_confidence(pattern, (attr,), frequencies)
+                                lift = calculate_lift(pattern, (attr,), frequencies)
+                                if lift > 0:
+                                    new_map_candidates.append({new_pattern: frequencies})
+                                    if confidence > 0:
+                                        list_patterns.append({
+                                            'antecedent': list(pattern),
+                                            'consequent': [attr],
+                                            'support': support,
+                                            'confidence': confidence,
+                                            'lift': lift
+                                        })
         map_candidates = new_map_candidates
         k += 1
     return list_patterns
