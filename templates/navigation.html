@@ -17,6 +17,11 @@
                         href="finding_best_recommendation">Recommendation</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link {% if active_page == 'recommendation_page_with_database' %}active{% endif %}"
+                        aria-current="{% if active_page == 'recommendation_page_with_database' %}page{% endif %}"
+                        href="finding_best_recommendation_with_database">Recommendation with database</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link {% if active_page == 'visualize_graph_1' %}active{% endif %}"
                         aria-current="{% if active_page == 'visualize_graph_1' %}page{% endif %}"
                         href="visualize_graph_1">Visualize graph 1</a>
