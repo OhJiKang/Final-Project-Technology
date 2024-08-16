@@ -15,6 +15,7 @@
 #### Cách 2:Chạy thông qua Local thông qua việc thực hiện lệnh ở thư mục gốc
 - Thực hiện lệnh !pip install requirements.txt
 - Thực hiện lệnh python app.py
+- Nhập đường link: http://127.0.0.1:5000 để chạy trang Web
 ### Tài liệu tham khảo
 #### Tiếng Việt
 1.	Thuật toán song song khai phá Top-K đồ thị con phổ biến—TaiLieu.VN. (n.d.). Retrieved July 27, 2024, from https://tailieu.vn/doc/thuat-toan-song-song-khai-pha-top-k-do-thi-con-pho-bien-2312892.html
