@@ -151,4 +151,4 @@ def get_unique_items_from_files():
     return jsonify({'error': 'Invalid file format'})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,port=8000)
