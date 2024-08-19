@@ -13,7 +13,7 @@
 #### Cách 1:Chạy thông qua Website Hosing
 - Thông qua link được hosting trên Azure để chạy trang web: https://graphmining.azurewebsites.net/
 #### Cách 2:Chạy thông qua Local thông qua việc thực hiện lệnh ở thư mục gốc
-- Thực hiện lệnh !pip install requirements.txt
+- Thực hiện lệnh !pip install -r requirements.txt
 - Thực hiện lệnh python app.py
 - Nhập đường link: http://127.0.0.1:5000 để chạy trang Web
 ### Tài liệu tham khảo
